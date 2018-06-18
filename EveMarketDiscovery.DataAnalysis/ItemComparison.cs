@@ -50,8 +50,7 @@ namespace EveMarketDiscovery.DataAnalysis
         {
             get
             {
-                //Find the higher price. Thats where you'll be selling
-                if(BaseAveragePrice > AveragePrice)
+                if(BaseVolume > Volume)
                 {
                     return BaseVolume * PriceDifference;
                 }
@@ -59,7 +58,6 @@ namespace EveMarketDiscovery.DataAnalysis
                 {
                     return Volume * PriceDifference;
                 }
-                
             }
         }
 
