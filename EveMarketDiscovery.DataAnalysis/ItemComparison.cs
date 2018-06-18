@@ -45,7 +45,23 @@ namespace EveMarketDiscovery.DataAnalysis
                 return averageVolume * ProfitMargin;
             }
         }
-            
+
+        public float PotentialDailyProfit
+        {
+            get
+            {
+                //Find the higher price. Thats where you'll be selling
+                if(BaseAveragePrice > AveragePrice)
+                {
+                    return BaseVolume * PriceDifference;
+                }
+                else
+                {
+                    return Volume * PriceDifference;
+                }
+                
+            }
+        }
 
         public long BaseVolume { get; set; }
 

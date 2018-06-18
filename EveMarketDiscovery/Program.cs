@@ -16,6 +16,13 @@ namespace EveMarketDiscovery
             Console.WriteLine("Eve Market Discovery");
             Console.WriteLine("-------------------------");
 
+            //Console.WriteLine("Press [W] to Download Data from Web, or press anything else to continue...");
+
+            //if (Console.ReadLine().ToLower() == "w")
+            //{
+            //    EveSSO.MarketHistoryProvider.GetMarketHistoryFromWeb(3000);
+            //}
+
             //Console.WriteLine("Enter a region id:");
             //var regionId = long.Parse(Console.ReadLine());
             //long jitaRegionId = 10000002;
@@ -25,7 +32,7 @@ namespace EveMarketDiscovery
 
             Console.WriteLine("Getting cached data. This can take awhile...");
 
-            int itemLimit = 100;
+            int itemLimit = 3000;
             var eveMarketData = new EveMarketData(itemLimit);
             var dataAnalyzer = new EveMarketDataAnalyzer(eveMarketData);
             Console.WriteLine("Cache loaded..");
@@ -35,7 +42,7 @@ namespace EveMarketDiscovery
 
             Console.WriteLine("Getting comparisons");
 
-            var topPriceDifferences = analysis.GetTopItemComparisons(5, 10000043, 0, 0);
+            var topPriceDifferences = analysis.GetTopItemComparisons(20, minVolume: 10);
 
             var regionProvider = new RegionProvider();
 
@@ -44,10 +51,17 @@ namespace EveMarketDiscovery
             {
                 var regionName = regionProvider.RegionNames[item.RegionId];
                 //Console.WriteLine($"Jita - { regionName } : { item.ItemName }  { item.ProfitMargin }% ||| { item.BaseVolume  } ||| { item.Volume }  ");
-                Console.WriteLine($"Jita - {regionName} { item.ItemName }  PM: { item.ProfitMargin } ||||  PPM:{ Math.Round(item.AverageVolumeProfitMarginPotential, 3) }  ");
+                Console.WriteLine($"Jita - {regionName} { item.ItemName } ||||  PDP: { item.PotentialDailyProfit } ||||  PM:{ Math.Round(item.ProfitMargin, 3) }  ");
             }
 
+            Console.WriteLine("Save as csv? y/n");
 
+            if(Console.ReadLine().ToLower() == "y")
+            {
+                Console.WriteLine("Enter a file name: ");
+                var fileName = Console.ReadLine();
+                dataAnalyzer.SaveEveMarketDataAnalysisAsCSV(analysis, $"{fileName}.csv");
+            }
 
             Console.ReadLine();
 

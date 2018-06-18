@@ -2,6 +2,7 @@
 using EveSSO;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,7 +16,6 @@ namespace EveMarketDiscovery.DataAnalysis
             _eveMarketData = eveMarketData;
             _regionProvider = new RegionProvider();
         }
-
 
         public EveMarketDataAnalysis GetAnalysis(int itemLimit)
         {
@@ -48,8 +48,9 @@ namespace EveMarketDiscovery.DataAnalysis
                     try
                     {
                         var itemComparison = new ItemComparison();
-                        var history = itemMarketHistory.MarketHistory[0];
-                        var baseHistory = baseRegionData.ItemMarketHistories.Where(h => h.ItemId == itemMarketHistory.ItemId).FirstOrDefault().MarketHistory[0];
+                        var history = itemMarketHistory.MarketHistory[itemMarketHistory.MarketHistory.Length - 1];
+                        var baseHistories = baseRegionData.ItemMarketHistories.Where(h => h.ItemId == itemMarketHistory.ItemId).FirstOrDefault();
+                        var baseHistory = baseHistories.MarketHistory[baseHistories.MarketHistory.Length - 1];
 
                         itemComparison.BaseRegionId = baseRegionId;
                         itemComparison.ItemId = itemMarketHistory.ItemId;
@@ -69,7 +70,7 @@ namespace EveMarketDiscovery.DataAnalysis
                     {
                         continue;
                     }
-                    catch(IndexOutOfRangeException)
+                    catch (IndexOutOfRangeException)
                     {
                         continue;
                     }
@@ -79,7 +80,32 @@ namespace EveMarketDiscovery.DataAnalysis
             return result;
         }
 
+        public void SaveEveMarketDataAnalysisAsCSV(EveMarketDataAnalysis eveMarketDataAnalysis, string fileName)
+        {
+            StringBuilder csvBuild = new StringBuilder();
+            csvBuild.AppendLine($"ItemName,Region,BaseRegion,AveragePrice,BaseAveragePrice,Difference,ProfitMargin,Volume,BaseVolume,AverageVolumeProfitMarginPotential,PotentialDailyProfit"); //header
 
+            foreach (var regionComparison in eveMarketDataAnalysis.RegionComparisons)
+            {
+                string regionName = new RegionProvider().RegionNames[regionComparison.RegionId];
+
+                foreach (var itemComparison in regionComparison.ItemComparisons)
+                {
+                    csvBuild.AppendLine($"{ itemComparison.ItemName },{ regionName },Jita," +
+                                        $"{ itemComparison.AveragePrice },{ itemComparison.BaseAveragePrice },{ itemComparison.PriceDifference }," +
+                                        $"{ itemComparison.ProfitMargin },{itemComparison.Volume},{ itemComparison.BaseVolume}," +
+                                        $"{ itemComparison.AverageVolumeProfitMarginPotential },{ itemComparison.PotentialDailyProfit }");
+                }
+            }
+
+            if (!Directory.Exists("exports"))
+            {
+                Directory.CreateDirectory("exports");
+            }
+
+            File.WriteAllText(Path.Combine("exports", fileName), csvBuild.ToString());
+            Console.WriteLine($"Saved CSV as { fileName }");
+        }
 
 
         private EveMarketData _eveMarketData;

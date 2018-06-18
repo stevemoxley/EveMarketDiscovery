@@ -11,7 +11,7 @@ namespace EveMarketDiscovery.DataAnalysis
 
         public List<RegionComparison> RegionComparisons = new List<RegionComparison>();
 
-        public List<ItemComparison> GetTopItemComparisons(int numberToGet = -1, long singularRegionId = 0, float minimumProfitMargin = 0, float maximumProfitMargin = 0)
+        public List<ItemComparison> GetTopItemComparisons(int numberToGet = -1, long singularRegionId = 0, float minimumProfitMargin = 0, float maximumProfitMargin = 0, int minVolume = 0)
         {
             var result = new List<ItemComparison>();
 
@@ -20,7 +20,7 @@ namespace EveMarketDiscovery.DataAnalysis
                 result.AddRange(item.ItemComparisons);
             }
 
-            result = result.OrderByDescending(s => s.ProfitMargin).ToList();
+            result = result.OrderByDescending(s => s.PotentialDailyProfit).ToList();
 
             if(singularRegionId > 0)
             {
@@ -37,10 +37,17 @@ namespace EveMarketDiscovery.DataAnalysis
                 result = result.Where(r => r.ProfitMargin <= minimumProfitMargin).ToList();
             }
 
+
+            if (minVolume > 0)
+            {
+                result = result.Where(r => r.Volume >= minVolume).ToList();
+            }
+
             if (numberToGet > -1)
             {
                 result = result.Take(numberToGet).ToList();
             }
+
 
             return result;
         }

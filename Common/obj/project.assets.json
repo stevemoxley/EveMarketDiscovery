@@ -183,11 +183,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Steve\\source\\repos\\EveMarketDiscovery\\Common\\Common.csproj",
+      "projectUniqueName": "E:\\Github\\EveMarketDiscovery\\Common\\Common.csproj",
       "projectName": "Common",
-      "projectPath": "C:\\Users\\Steve\\source\\repos\\EveMarketDiscovery\\Common\\Common.csproj",
+      "projectPath": "E:\\Github\\EveMarketDiscovery\\Common\\Common.csproj",
       "packagesPath": "C:\\Users\\Steve\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Steve\\source\\repos\\EveMarketDiscovery\\Common\\obj\\",
+      "outputPath": "E:\\Github\\EveMarketDiscovery\\Common\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

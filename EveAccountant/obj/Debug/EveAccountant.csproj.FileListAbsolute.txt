@@ -1,0 +1,13 @@
+E:\Github\EveMarketDiscovery\EveAccountant\bin\Debug\EveAccountant.exe.config
+E:\Github\EveMarketDiscovery\EveAccountant\bin\Debug\EveAccountant.exe
+E:\Github\EveMarketDiscovery\EveAccountant\bin\Debug\EveAccountant.pdb
+E:\Github\EveMarketDiscovery\EveAccountant\obj\Debug\EveAccountant.Authentication.resources
+E:\Github\EveMarketDiscovery\EveAccountant\obj\Debug\EveAccountant.Main.resources
+E:\Github\EveMarketDiscovery\EveAccountant\obj\Debug\EveAccountant.Properties.Resources.resources
+E:\Github\EveMarketDiscovery\EveAccountant\obj\Debug\EveAccountant.csproj.GenerateResource.cache
+E:\Github\EveMarketDiscovery\EveAccountant\obj\Debug\EveAccountant.csproj.CoreCompileInputs.cache
+E:\Github\EveMarketDiscovery\EveAccountant\obj\Debug\EveAccountant.exe
+E:\Github\EveMarketDiscovery\EveAccountant\obj\Debug\EveAccountant.pdb
+E:\Github\EveMarketDiscovery\EveAccountant\bin\Debug\Newtonsoft.Json.dll
+E:\Github\EveMarketDiscovery\EveAccountant\bin\Debug\Newtonsoft.Json.xml
+E:\Github\EveMarketDiscovery\EveAccountant\obj\Debug\EveAccountant.csproj.CopyComplete

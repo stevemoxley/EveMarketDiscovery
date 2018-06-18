@@ -16,11 +16,11 @@ namespace EveSSO
         {
             //Try to get cached data
             string marketDataJson = string.Empty;
-            if (!Directory.Exists("/cache"))
+            if (!Directory.Exists("cache"))
             {
-                Directory.CreateDirectory("/cache");
+                Directory.CreateDirectory("cache");
             }
-            string fileFormat = $"/cache/{regionId}_{itemId}.txt";
+            string fileFormat = $"cache/{regionId}_{itemId}.txt";
             if (File.Exists(fileFormat))
             {
                 //Check the age of the file
@@ -63,6 +63,19 @@ namespace EveSSO
             return result;
         }
 
+        public static List<RegionMarketHistory> GetMarketHistoryFromWeb(int itemLimit)
+        {
+            var result = new List<RegionMarketHistory>();
+            foreach (var region in Regions)
+            {
+                result.Add(GetRegionMarketHistory(region, false, itemLimit));
+            }
+
+            return result;
+        }
+
+
+
         private static RegionMarketHistory GetRegionMarketHistory(long regionId, bool cacheOnly, int itemLimit)
         {
             RegionMarketHistory result = new RegionMarketHistory();
@@ -70,7 +83,7 @@ namespace EveSSO
 
             var items = ItemProvider.Items();
 
-            if(itemLimit > -1)
+            if (itemLimit > -1)
             {
                 items = items.Take(itemLimit).ToDictionary(pair => pair.Key, pair => pair.Value);
             }
@@ -78,7 +91,7 @@ namespace EveSSO
             foreach (var item in items)
             {
                 var itemHistory = GetItemMarketHistory(regionId, item.Key, item.Value, cacheOnly);
-                if(itemHistory == null)
+                if (itemHistory == null)
                 {
                     continue;
                 }
@@ -100,12 +113,21 @@ namespace EveSSO
 
         private static string GetHistoryJsonFromWeb(long regionId, long itemId)
         {
-            string fileFormat = $"/cache/{regionId}_{itemId}.txt";
-            var webClient = new WebClient();
-            string marketDataJson = webClient.DownloadString($"https://esi.evetech.net/latest/markets/{ regionId }/history/?datasource=tranquility&type_id={ itemId }");
-            File.WriteAllText(fileFormat, marketDataJson);
+            try
+            {
+                Console.WriteLine($"Downloading web history for {regionId} - {itemId}");
+                string fileFormat = $"cache/{regionId}_{itemId}.txt";
+                var webClient = new WebClient();
+                string marketDataJson = webClient.DownloadString($"https://esi.evetech.net/latest/markets/{ regionId }/history/?datasource=tranquility&type_id={ itemId }");
+                File.WriteAllText(fileFormat, marketDataJson);
 
-            return marketDataJson;
+                return marketDataJson;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Exception from web: { ex.Message }");
+                return string.Empty;
+            }
         }
 
         private static long[] Regions = { 10000002, 10000043, 10000030, 10000042 };
