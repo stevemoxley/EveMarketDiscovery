@@ -1,0 +1,13 @@
+C:\Users\Steve\source\repos\EveMarketDiscovery\EveSSO\bin\Debug\netstandard2.0\EveSSO.deps.json
+C:\Users\Steve\source\repos\EveMarketDiscovery\EveSSO\bin\Debug\netstandard2.0\EveSSO.dll
+C:\Users\Steve\source\repos\EveMarketDiscovery\EveSSO\bin\Debug\netstandard2.0\EveSSO.pdb
+C:\Users\Steve\source\repos\EveMarketDiscovery\EveSSO\obj\Debug\netstandard2.0\EveSSO.csprojAssemblyReference.cache
+C:\Users\Steve\source\repos\EveMarketDiscovery\EveSSO\obj\Debug\netstandard2.0\EveSSO.csproj.CoreCompileInputs.cache
+C:\Users\Steve\source\repos\EveMarketDiscovery\EveSSO\obj\Debug\netstandard2.0\EveSSO.AssemblyInfoInputs.cache
+C:\Users\Steve\source\repos\EveMarketDiscovery\EveSSO\obj\Debug\netstandard2.0\EveSSO.AssemblyInfo.cs
+C:\Users\Steve\source\repos\EveMarketDiscovery\EveSSO\obj\Debug\netstandard2.0\EveSSO.dll
+C:\Users\Steve\source\repos\EveMarketDiscovery\EveSSO\obj\Debug\netstandard2.0\EveSSO.pdb
+C:\Users\Steve\source\repos\EveMarketDiscovery\EveSSO\bin\Debug\netstandard2.0\items.txt
+C:\Users\Steve\source\repos\EveMarketDiscovery\EveSSO\bin\Debug\netstandard2.0\Common.dll
+C:\Users\Steve\source\repos\EveMarketDiscovery\EveSSO\bin\Debug\netstandard2.0\Common.pdb
+C:\Users\Steve\source\repos\EveMarketDiscovery\EveSSO\obj\Debug\netstandard2.0\EveSSO.csproj.CopyComplete

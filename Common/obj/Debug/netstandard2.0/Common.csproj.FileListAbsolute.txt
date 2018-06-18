@@ -1,0 +1,10 @@
+C:\Users\Steve\source\repos\EveMarketDiscovery\Common\bin\Debug\netstandard2.0\items.txt
+C:\Users\Steve\source\repos\EveMarketDiscovery\Common\bin\Debug\netstandard2.0\Common.deps.json
+C:\Users\Steve\source\repos\EveMarketDiscovery\Common\bin\Debug\netstandard2.0\Common.dll
+C:\Users\Steve\source\repos\EveMarketDiscovery\Common\bin\Debug\netstandard2.0\Common.pdb
+C:\Users\Steve\source\repos\EveMarketDiscovery\Common\obj\Debug\netstandard2.0\Common.csprojAssemblyReference.cache
+C:\Users\Steve\source\repos\EveMarketDiscovery\Common\obj\Debug\netstandard2.0\Common.csproj.CoreCompileInputs.cache
+C:\Users\Steve\source\repos\EveMarketDiscovery\Common\obj\Debug\netstandard2.0\Common.AssemblyInfoInputs.cache
+C:\Users\Steve\source\repos\EveMarketDiscovery\Common\obj\Debug\netstandard2.0\Common.AssemblyInfo.cs
+C:\Users\Steve\source\repos\EveMarketDiscovery\Common\obj\Debug\netstandard2.0\Common.dll
+C:\Users\Steve\source\repos\EveMarketDiscovery\Common\obj\Debug\netstandard2.0\Common.pdb
