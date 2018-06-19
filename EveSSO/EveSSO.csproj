@@ -12,4 +12,9 @@
     <ProjectReference Include="..\Common\Common.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Wallet\Journal\" />
+    <Folder Include="Wallet\Transactions\" />
+  </ItemGroup>
+
 </Project>

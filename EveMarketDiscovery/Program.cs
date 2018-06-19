@@ -1,6 +1,7 @@
 ﻿using Common;
 using EveMarketDiscovery.DataAnalysis;
 using EveSSO;
+using EveSSO.Market.Order;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,6 +24,13 @@ namespace EveMarketDiscovery
             //    EveSSO.MarketHistoryProvider.GetMarketHistoryFromWeb(3000);
             //}
 
+            //Console.WriteLine("Press [O] To Download Order Data From Web, or press anything else to continue...");
+
+            //if(Console.ReadKey().KeyChar == 'o')
+            //{
+            //    var orders = MarketOrderProvider.GetItemMarketOrders(10000002, 34, "sell", false);
+            //}
+
             //Console.WriteLine("Enter a region id:");
             //var regionId = long.Parse(Console.ReadLine());
             //long jitaRegionId = 10000002;
@@ -32,7 +40,7 @@ namespace EveMarketDiscovery
 
             Console.WriteLine("Getting cached data. This can take awhile...");
 
-            int itemLimit = 3000;
+            int itemLimit = 1000;
             var eveMarketData = new EveMarketData(itemLimit);
             var dataAnalyzer = new EveMarketDataAnalyzer(eveMarketData);
             Console.WriteLine("Cache loaded..");
@@ -46,13 +54,13 @@ namespace EveMarketDiscovery
 
             var regionProvider = new RegionProvider();
 
-            Console.WriteLine("Showing Potential Profit Margin");
-            foreach (var item in topPriceDifferences)
-            {
-                var regionName = regionProvider.RegionNames[item.RegionId];
-                //Console.WriteLine($"Jita - { regionName } : { item.ItemName }  { item.ProfitMargin }% ||| { item.BaseVolume  } ||| { item.Volume }  ");
-                Console.WriteLine($"Jita - {regionName} { item.ItemName } ||||  PDP: { item.PotentialDailyProfit } ||||  PM:{ Math.Round(item.ProfitMargin, 3) }  ");
-            }
+            //Console.WriteLine("Showing Potential Profit Margin");
+            //foreach (var item in topPriceDifferences)
+            //{
+            //    var regionName = regionProvider.RegionNames[item.RegionId];
+            //    //Console.WriteLine($"Jita - { regionName } : { item.ItemName }  { item.ProfitMargin }% ||| { item.BaseVolume  } ||| { item.Volume }  ");
+            //    Console.WriteLine($"Jita - {regionName} { item.ItemName } ||||  PDP: { item.PotentialDailyProfit } ||||  PM:{ Math.Round(item.ProfitMargin, 3) }  ");
+            //}
 
             Console.WriteLine("Save as csv? y/n");
 

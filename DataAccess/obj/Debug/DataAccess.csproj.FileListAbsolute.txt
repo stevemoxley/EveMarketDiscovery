@@ -1,0 +1,10 @@
+E:\Github\EveMarketDiscovery\DataAccess\bin\Debug\DataAccess.dll
+E:\Github\EveMarketDiscovery\DataAccess\bin\Debug\DataAccess.pdb
+E:\Github\EveMarketDiscovery\DataAccess\bin\Debug\System.Data.SQLite.dll
+E:\Github\EveMarketDiscovery\DataAccess\bin\Debug\System.Data.SQLite.xml
+E:\Github\EveMarketDiscovery\DataAccess\bin\Debug\System.Data.SQLite.dll.config
+E:\Github\EveMarketDiscovery\DataAccess\obj\Debug\DataAccess.csprojAssemblyReference.cache
+E:\Github\EveMarketDiscovery\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
+E:\Github\EveMarketDiscovery\DataAccess\obj\Debug\DataAccess.csproj.CopyComplete
+E:\Github\EveMarketDiscovery\DataAccess\obj\Debug\DataAccess.dll
+E:\Github\EveMarketDiscovery\DataAccess\obj\Debug\DataAccess.pdb

@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EveMarketDiscovery.DataAnal
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EveAccountant", "EveAccountant\EveAccountant.csproj", "{B42B0D5F-9E68-4511-A75E-C7952ADB1610}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{D745932D-8DBB-4301-B2B8-B6206534C481}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{B42B0D5F-9E68-4511-A75E-C7952ADB1610}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B42B0D5F-9E68-4511-A75E-C7952ADB1610}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B42B0D5F-9E68-4511-A75E-C7952ADB1610}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D745932D-8DBB-4301-B2B8-B6206534C481}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D745932D-8DBB-4301-B2B8-B6206534C481}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D745932D-8DBB-4301-B2B8-B6206534C481}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D745932D-8DBB-4301-B2B8-B6206534C481}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
