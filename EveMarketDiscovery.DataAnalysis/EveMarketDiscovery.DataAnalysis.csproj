@@ -46,6 +46,7 @@
     <Compile Include="Orders\EveMarketOrdersDataAnalysis.cs" />
     <Compile Include="Orders\EveMarketOrdersDataAnalyzer.cs" />
     <Compile Include="Orders\ItemOrderComparison.cs" />
+    <Compile Include="Orders\RegionItemOrderComparison.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="History\RegionItemHistoryComparison.cs" />
   </ItemGroup>
