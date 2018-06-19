@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EveMarketDiscovery.DataAnalysis
+namespace EveMarketDiscovery.DataAnalysis.History
 {
-    public class RegionComparison
+    public class RegionItemHistoryComparison
     {
         public long BaseRegionId { get; set; }
 
         public long RegionId { get; set; }
 
-        public List<ItemComparison> ItemComparisons { get; set; } = new List<ItemComparison>();
+        public List<ItemHistoryComparison> ItemComparisons { get; set; } = new List<ItemHistoryComparison>();
     }
 }

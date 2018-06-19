@@ -94,5 +94,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EveSSO\EveSSO.csproj">
+      <Project>{73bb4d1a-0388-4b8b-94ff-40f53fb64aa2}</Project>
+      <Name>EveSSO</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

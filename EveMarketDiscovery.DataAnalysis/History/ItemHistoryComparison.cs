@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EveMarketDiscovery.DataAnalysis
+namespace EveMarketDiscovery.DataAnalysis.History
 {
-    public class ItemComparison
+    public class ItemHistoryComparison
     {
         public long BaseRegionId { get; set; }
 

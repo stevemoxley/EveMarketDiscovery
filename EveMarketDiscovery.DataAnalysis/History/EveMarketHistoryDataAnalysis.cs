@@ -4,16 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EveMarketDiscovery.DataAnalysis
+namespace EveMarketDiscovery.DataAnalysis.History
 {
-    public class EveMarketDataAnalysis
+    public class EveMarketHistoryDataAnalysis
     {
 
-        public List<RegionComparison> RegionComparisons = new List<RegionComparison>();
+        public List<RegionItemHistoryComparison> RegionComparisons = new List<RegionItemHistoryComparison>();
 
-        public List<ItemComparison> GetTopItemComparisons(int numberToGet = -1, long singularRegionId = 0, float minimumProfitMargin = 0, float maximumProfitMargin = 0, int minVolume = 0)
+        public List<ItemHistoryComparison> GetTopItemComparisons(int numberToGet = -1, long singularRegionId = 0, float minimumProfitMargin = 0, float maximumProfitMargin = 0, int minVolume = 0)
         {
-            var result = new List<ItemComparison>();
+            var result = new List<ItemHistoryComparison>();
 
             foreach (var item in RegionComparisons)
             {

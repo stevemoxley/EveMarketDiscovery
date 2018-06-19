@@ -115,7 +115,7 @@ namespace EveAccountant
 
     public class CharacterInfo
     {
-        public int CharacterID { get; set; }
+        public string CharacterID { get; set; }
         public string CharacterName { get; set; }
         public DateTime ExpiresOn { get; set; }
         public string Scopes { get; set; }

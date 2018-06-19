@@ -7,30 +7,30 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EveMarketDiscovery.DataAnalysis
+namespace EveMarketDiscovery.DataAnalysis.History
 {
-    public class EveMarketDataAnalyzer
+    public class EveMarketDataHistoryAnalyzer
     {
-        public EveMarketDataAnalyzer(EveMarketData eveMarketData)
+        public EveMarketDataHistoryAnalyzer(EveMarketData eveMarketData)
         {
             _eveMarketData = eveMarketData;
             _regionProvider = new RegionProvider();
         }
 
-        public EveMarketDataAnalysis GetAnalysis(int itemLimit)
+        public EveMarketHistoryDataAnalysis GetAnalysis(int itemLimit)
         {
             var data = _eveMarketData.RegionMarketHistories;
             var baseRegionId = 10000002; //Jita
             var baseRegionData = data.Where(h => h.RegionId == baseRegionId).FirstOrDefault();
             data.Remove(baseRegionData);
 
-            EveMarketDataAnalysis result = new EveMarketDataAnalysis();
+            EveMarketHistoryDataAnalysis result = new EveMarketHistoryDataAnalysis();
 
             foreach (var regionDataHistory in data)
             {
                 var itemMarketHistories = regionDataHistory.ItemMarketHistories;
 
-                var regionComparison = new RegionComparison
+                var regionComparison = new RegionItemHistoryComparison
                 {
                     BaseRegionId = baseRegionId,
                     RegionId = regionDataHistory.RegionId
@@ -47,7 +47,7 @@ namespace EveMarketDiscovery.DataAnalysis
                 {
                     try
                     {
-                        var itemComparison = new ItemComparison();
+                        var itemComparison = new ItemHistoryComparison();
                         var history = itemMarketHistory.MarketHistory[itemMarketHistory.MarketHistory.Length - 1];
                         var baseHistories = baseRegionData.ItemMarketHistories.Where(h => h.ItemId == itemMarketHistory.ItemId).FirstOrDefault();
                         var baseHistory = baseHistories.MarketHistory[baseHistories.MarketHistory.Length - 1];
@@ -80,7 +80,7 @@ namespace EveMarketDiscovery.DataAnalysis
             return result;
         }
 
-        public void SaveEveMarketDataAnalysisAsCSV(EveMarketDataAnalysis eveMarketDataAnalysis, string fileName)
+        public void SaveEveMarketDataAnalysisAsCSV(EveMarketHistoryDataAnalysis eveMarketDataAnalysis, string fileName)
         {
             StringBuilder csvBuild = new StringBuilder();
             csvBuild.AppendLine($"ItemName,Region,BaseRegion,AveragePrice,BaseAveragePrice,Difference,ProfitMargin,Volume,BaseVolume,AverageVolumeProfitMarginPotential,PotentialDailyProfit"); //header
