@@ -16,11 +16,11 @@ namespace EveSSO.Market.History
         {
             //Try to get cached data
             string marketDataJson = string.Empty;
-            if (!Directory.Exists("cache"))
+            if (!Directory.Exists("cache/history"))
             {
-                Directory.CreateDirectory("cache");
+                Directory.CreateDirectory("cache/history");
             }
-            string fileFormat = $"cache/{regionId}_{itemId}.txt";
+            string fileFormat = $"cache/history/{regionId}_{itemId}.txt";
             if (File.Exists(fileFormat))
             {
                 //Check the age of the file
@@ -108,7 +108,7 @@ namespace EveSSO.Market.History
             try
             {
                 Console.WriteLine($"Downloading web history for {regionId} - {itemId}");
-                string fileFormat = $"cache/{regionId}_{itemId}.txt";
+                string fileFormat = $"cache/history/{regionId}_{itemId}.txt";
                 var webClient = new WebClient();
                 string marketDataJson = webClient.DownloadString($"https://esi.evetech.net/latest/markets/{ regionId }/history/?datasource=tranquility&type_id={ itemId }");
                 File.WriteAllText(fileFormat, marketDataJson);

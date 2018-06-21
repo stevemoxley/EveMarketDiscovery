@@ -10,10 +10,17 @@ namespace EveSSO.Wallet.Transactions
     {
         public static Transaction[] GetCharacterTransactions(string characterId, string accessToken)
         {
-            Console.WriteLine($"Downloading journal {characterId}");
-            var webClient = new WebClient();
-            string transactionJson = webClient.DownloadString($"https://esi.evetech.net/latest/characters/{ characterId }/wallet/transactions/?token={ accessToken }");
-            return JsonConvert.DeserializeObject<Transaction[]>(transactionJson);
+            try
+            {
+                Console.WriteLine($"Downloading journal {characterId}");
+                var webClient = new WebClient();
+                string transactionJson = webClient.DownloadString($"https://esi.evetech.net/latest/characters/{ characterId }/wallet/transactions/?token={ accessToken }");
+                return JsonConvert.DeserializeObject<Transaction[]>(transactionJson);
+            }
+            catch (Exception ex)
+            {
+                return new Transaction[0];
+            }
         }
     }
 }

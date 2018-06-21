@@ -113,3 +113,4 @@ E:\Github\EveMarketDiscovery\EveAccountant\bin\Debug\EveSSO.dll
 E:\Github\EveMarketDiscovery\EveAccountant\bin\Debug\Common.dll
 E:\Github\EveMarketDiscovery\EveAccountant\bin\Debug\EveSSO.pdb
 E:\Github\EveMarketDiscovery\EveAccountant\bin\Debug\Common.pdb
+E:\Github\EveMarketDiscovery\EveAccountant\bin\Debug\items.txt

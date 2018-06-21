@@ -16,13 +16,13 @@ namespace EveSSO.Market.Order
             List<RegionMarketOrders> result = new List<RegionMarketOrders>();
             foreach (var region in Regions)
             {
-                result.Add(GetRegionMarketOrders(region, "buy", itemLimit, cacheOnly));
+                result.Add(GetRegionMarketOrders(region, itemLimit, cacheOnly));
             }
 
             return result;
         }
 
-        public static RegionMarketOrders GetRegionMarketOrders(long regionId, string orderType, int itemLimit = -1, bool cacheOnly = false)
+        public static RegionMarketOrders GetRegionMarketOrders(long regionId, int itemLimit = -1, bool cacheOnly = false)
         {
             RegionMarketOrders result = new RegionMarketOrders();
             result.RegionId = regionId;
@@ -36,13 +36,13 @@ namespace EveSSO.Market.Order
 
             foreach (var item in items)
             {
-                result.ItemMarketOrders.Add(GetItemMarketOrders(regionId, item.Key, orderType, cacheOnly));
+                result.ItemMarketOrders.Add(GetItemMarketOrders(regionId, item.Key, cacheOnly));
             }
 
             return result;
         }
 
-        public static ItemMarketOrders GetItemMarketOrders(long regionId, long itemId, string orderType, bool cacheOnly = false)
+        public static ItemMarketOrders GetItemMarketOrders(long regionId, long itemId, bool cacheOnly = false)
         {
             ItemMarketOrders result = new ItemMarketOrders();
             result.RegionId = regionId;
@@ -58,7 +58,7 @@ namespace EveSSO.Market.Order
                 var fileAge = DateTime.Now - fileInfo.LastWriteTime;
                 if(fileAge.TotalHours >= 24 && !cacheOnly)
                 {
-                    ordersJson = GetMarketOrderJsonFromWeb(regionId, itemId, orderType);
+                    ordersJson = GetMarketOrderJsonFromWeb(regionId, itemId);
                 }
                 else
                 {
@@ -68,7 +68,7 @@ namespace EveSSO.Market.Order
             else
             {
                 if(!cacheOnly)
-                    ordersJson = GetMarketOrderJsonFromWeb(regionId, itemId, orderType);
+                    ordersJson = GetMarketOrderJsonFromWeb(regionId, itemId);
             }
 
             result.MarketOrders = JsonConvert.DeserializeObject<MarketOrder[]>(ordersJson);
@@ -77,7 +77,7 @@ namespace EveSSO.Market.Order
             return result;
         }
 
-        private static string GetMarketOrderJsonFromWeb(long regionId, long itemId, string orderType)
+        private static string GetMarketOrderJsonFromWeb(long regionId, long itemId)
         {
             try
             {

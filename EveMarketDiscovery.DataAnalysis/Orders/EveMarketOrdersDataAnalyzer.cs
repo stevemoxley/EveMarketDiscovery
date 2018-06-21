@@ -1,4 +1,5 @@
-﻿using EveSSO;
+﻿using Common;
+using EveSSO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,6 +18,12 @@ namespace EveMarketDiscovery.DataAnalysis.Orders
         public void GetAnalysis(int itemLimit)
         {
             var baseRegionId = 10000002; //Jita
+            var items = ItemProvider.Items().Take(itemLimit);
+
+            foreach (var order in _eveMarketData.RegionMarketOrders)
+            {
+
+            }
         }
 
         private EveMarketData _eveMarketData;

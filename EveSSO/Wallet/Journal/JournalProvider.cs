@@ -11,10 +11,17 @@ namespace EveSSO.Wallet.Journal
 
         public static JournalEntry[] GetCharacterJournal(string characterId, string accessToken)
         {
-            Console.WriteLine($"Downloading journal {characterId}");
-            var webClient = new WebClient();
-            string journalEntryJson = webClient.DownloadString($"https://esi.evetech.net/latest/characters/{ characterId }/wallet/journal/?token={ accessToken }");
-            return JsonConvert.DeserializeObject<JournalEntry[]>(journalEntryJson);
+            try
+            {
+                Console.WriteLine($"Downloading journal {characterId}");
+                var webClient = new WebClient();
+                string journalEntryJson = webClient.DownloadString($"https://esi.evetech.net/latest/characters/{ characterId }/wallet/journal/?token={ accessToken }");
+                return JsonConvert.DeserializeObject<JournalEntry[]>(journalEntryJson);
+            }
+            catch (Exception ex)
+            {
+                return new JournalEntry[0];
+            }
         }
     }
 }
