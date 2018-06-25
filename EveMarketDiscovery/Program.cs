@@ -1,4 +1,5 @@
 ﻿using Common;
+using DataAccess;
 using EveMarketDiscovery.DataAnalysis;
 using EveMarketDiscovery.DataAnalysis.History;
 using EveMarketDiscovery.DataAnalysis.Orders;
@@ -19,6 +20,31 @@ namespace EveMarketDiscovery
             Console.WriteLine("Eve Market Discovery");
             Console.WriteLine("-------------------------");
 
+            try
+            {
+
+                using (var db = new DataContext())
+                {
+                    var transactions = db.Transactions.ToList();
+
+                    db.Transactions.Add(new Common.Models.Transaction
+                    {
+                        DateTime = DateTime.Now,
+                        Price = 100,
+                        Quantity = 10,
+                        TypeId = 1,
+                        LocationId = 100
+                    });
+                    db.SaveChanges();
+
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+
             //long jitaRegionId = 10000002;
             //long amarrRegionId = 10000043;
             //long heimatarRegionId - rens = 10000030;
@@ -31,11 +57,13 @@ namespace EveMarketDiscovery
             Console.WriteLine("Cache loaded..");
             Console.WriteLine("Press [H] For History Analysis. Press [O] For Order Analysis");
 
-            if(Console.ReadKey().KeyChar == 'h')
+            var @char = Console.ReadKey().KeyChar;
+
+            if (@char == 'h')
             {
                 GetHistoryAnalysis(eveMarketData, itemLimit);
             }
-            else if(Console.ReadKey().KeyChar == 'o')
+            else if (@char == 'o')
             {
                 GetOrderAnalysis(eveMarketData, itemLimit);
             }
@@ -63,7 +91,12 @@ namespace EveMarketDiscovery
 
         static void GetOrderAnalysis(EveMarketData data, int itemLimit)
         {
+
             var orderDataAnalyzer = new EveMarketOrdersDataAnalyzer(data);
+
+            long hek = 10000042;
+
+            orderDataAnalyzer.GetAnalysis(hek, itemLimit);
         }
     }
 }

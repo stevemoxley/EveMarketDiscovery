@@ -226,3 +226,16 @@ E:\Github\EveMarketDiscovery\EveMarketDiscovery\obj\Debug\EveMarketDiscovery.csp
 E:\Github\EveMarketDiscovery\EveMarketDiscovery\obj\Debug\EveMarketDiscovery.csproj.CopyComplete
 E:\Github\EveMarketDiscovery\EveMarketDiscovery\obj\Debug\EveMarketDiscovery.exe
 E:\Github\EveMarketDiscovery\EveMarketDiscovery\obj\Debug\EveMarketDiscovery.pdb
+E:\Github\EveMarketDiscovery\EveMarketDiscovery\bin\Debug\DataAccess.dll
+E:\Github\EveMarketDiscovery\EveMarketDiscovery\bin\Debug\EntityFramework.dll
+E:\Github\EveMarketDiscovery\EveMarketDiscovery\bin\Debug\EntityFramework.SqlServer.dll
+E:\Github\EveMarketDiscovery\EveMarketDiscovery\bin\Debug\DataAccess.pdb
+E:\Github\EveMarketDiscovery\EveMarketDiscovery\bin\Debug\DataAccess.dll.config
+E:\Github\EveMarketDiscovery\EveMarketDiscovery\bin\Debug\EntityFramework.xml
+E:\Github\EveMarketDiscovery\EveMarketDiscovery\bin\Debug\EntityFramework.SqlServer.xml
+E:\Github\EveMarketDiscovery\EveMarketDiscovery\bin\Debug\SQLite.CodeFirst.dll
+E:\Github\EveMarketDiscovery\EveMarketDiscovery\bin\Debug\System.Data.SQLite.dll
+E:\Github\EveMarketDiscovery\EveMarketDiscovery\bin\Debug\System.Data.SQLite.EF6.dll
+E:\Github\EveMarketDiscovery\EveMarketDiscovery\bin\Debug\System.Data.SQLite.Linq.dll
+E:\Github\EveMarketDiscovery\EveMarketDiscovery\bin\Debug\System.Data.SQLite.xml
+E:\Github\EveMarketDiscovery\EveMarketDiscovery\bin\Debug\System.Data.SQLite.dll.config

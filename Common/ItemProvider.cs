@@ -15,8 +15,9 @@ namespace Common
 
             var text = File.ReadAllLines("items.txt");
 
-            foreach (var line in text)
+            for (int i = 0; i < text.Length; i++)
             {
+                var line = text[i];
                 var parts = line.Split('|');
                 var id = long.Parse(parts[0]);
                 var name = parts[1].ToString();

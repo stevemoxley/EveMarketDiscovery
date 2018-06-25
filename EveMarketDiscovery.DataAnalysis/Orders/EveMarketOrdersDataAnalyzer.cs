@@ -15,15 +15,21 @@ namespace EveMarketDiscovery.DataAnalysis.Orders
             _eveMarketData = eveMarketData;
         }
 
-        public void GetAnalysis(int itemLimit)
+        public void GetAnalysis(long regionId, int itemLimit)
         {
             var baseRegionId = 10000002; //Jita
             var items = ItemProvider.Items().Take(itemLimit);
 
-            foreach (var order in _eveMarketData.RegionMarketOrders)
-            {
+            var regionOrders = _eveMarketData.RegionMarketOrders.Where(r => r.RegionId == regionId).FirstOrDefault();
 
+            foreach (var item in items)
+            {
+                //Get all the orders for this item
+                var orders = regionOrders.ItemMarketOrders.Where(i => i.ItemId == item.Key).FirstOrDefault().MarketOrders.ToList();
+                var buyOrders = orders.Where(o => o.is_buy_order).OrderByDescending(p => p.price).ToList();
+                var sellOrders = orders.Where(o => !o.is_buy_order).OrderBy(p => p.price).ToList();
             }
+
         }
 
         private EveMarketData _eveMarketData;

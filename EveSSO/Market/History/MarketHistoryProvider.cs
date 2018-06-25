@@ -122,6 +122,6 @@ namespace EveSSO.Market.History
             }
         }
 
-        private static long[] Regions = { 10000002, 10000043, 10000030, 10000042 };
+        private static long[] Regions = { 10000002, /*10000043, 10000030,*/ 10000042 };
     }
 }

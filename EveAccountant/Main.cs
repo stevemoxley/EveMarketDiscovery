@@ -30,10 +30,11 @@ namespace EveAccountant
         {
             var journalEntries = JournalProvider.GetCharacterJournal(AuthenticationManager.CharacterInfo.CharacterID, AuthenticationManager.AccessToken.access_token);
             var transactions = TransactionsProvider.GetCharacterTransactions(AuthenticationManager.CharacterInfo.CharacterID, AuthenticationManager.AccessToken.access_token).Where( t=> !t.is_buy).ToArray();
-            LoadDataTable(transactions, journalEntries);
+            var buyTransactions = TransactionsProvider.GetCharacterTransactions(AuthenticationManager.CharacterInfo.CharacterID, AuthenticationManager.AccessToken.access_token).Where(t => t.is_buy).ToArray();
+            LoadDataTable(transactions);
         }
 
-        private void LoadDataTable(Transaction[] transactions, JournalEntry[] journalEntries)
+        private void LoadDataTable(Transaction[] transactions)
         {
 
             DataTable dt = new DataTable();

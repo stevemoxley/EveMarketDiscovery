@@ -101,7 +101,6 @@
 262|Multifrequency L
 263|Cap Booster 25
 264|Cap Booster 50
-265|Heavy Defender Missile I
 266|Scourge Rocket
 267|Scourge Torpedo
 269|Mjolnir Auto-Targeting Light Missile I
@@ -1148,21 +1147,9 @@
 4256|Bomb Launcher II
 4258|Core Probe Launcher II
 4260|Expanded Probe Launcher II
-4262|Armored Warfare Link - Damage Control II
-4264|Armored Warfare Link - Passive Defense II
-4266|Armored Warfare Link - Rapid Repair II
-4268|Information Warfare Link - Electronic Superiority II
-4270|Information Warfare Link - Recon Operation II
-4272|Information Warfare Link - Sensor Integrity II
 4274|Mining Foreman Link - Harvester Capacitor Efficiency II
 4276|Mining Foreman Link - Laser Optimization II
 4278|Mining Foreman Link - Mining Laser Field Enhancement II
-4280|Siege Warfare Link - Active Shielding II
-4282|Siege Warfare Link - Shield Efficiency II
-4284|Siege Warfare Link - Shield Harmonizing II
-4286|Skirmish Warfare Link - Evasive Maneuvers II
-4288|Skirmish Warfare Link - Interdiction Maneuvers II
-4290|Skirmish Warfare Link - Rapid Deployment II
 4292|Siege Module II
 4294|Triage Module II
 4296|Medium Remote Hull Repairer II
@@ -1633,9 +1620,6 @@
 10886|X-Large Converse Deflection Catalyzer
 10888|X-Large C5-L Emergency Shield Overload I
 10998|Warp Core Stabilizer I
-11014|Command Processor I
-11017|Skirmish Warfare Link - Interdiction Maneuvers I
-11052|Information Warfare Link - Sensor Integrity I
 11082|Small Railgun Specialization
 11083|Small Beam Laser Specialization
 11084|Small Autocannon Specialization

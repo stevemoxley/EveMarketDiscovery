@@ -12,7 +12,7 @@ namespace EveSSO
         public EveMarketData(int itemLimit)
         {
             Console.WriteLine("Loading market history");
-            RegionMarketHistories = MarketHistoryProvider.GetMarketHistoryFromCache(itemLimit);
+            RegionMarketHistories = MarketHistoryProvider.GetMarketHistoryFromWeb(itemLimit);
             Console.WriteLine("Loading market orders");
             RegionMarketOrders = MarketOrderProvider.GetMarketOrders(itemLimit, false);
         }
