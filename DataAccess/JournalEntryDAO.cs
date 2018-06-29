@@ -1,4 +1,5 @@
-﻿using EveSSO.Wallet.Transactions;
+﻿using EveSSO.Wallet.Journal;
+using EveSSO.Wallet.Transactions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,16 +8,16 @@ using System.Threading.Tasks;
 
 namespace DataAccess
 {
-    public class TransactionDAO
+    public class JournalEntryDAO
     {
-        public void Add(Transaction transaction)
+        public void Add(JournalEntry journalEntry)
         {
             try
             {
 
                 using (var db = new DataContext())
                 {
-                    db.Transactions.Add(transaction);
+                    db.JournalEntries.Add(journalEntry);
                     db.SaveChanges();
                 }
             }
@@ -26,14 +27,14 @@ namespace DataAccess
             }
         }
 
-        public void Remove(Transaction transaction)
+        public void Remove(JournalEntry journalEntry)
         {
             try
             {
 
                 using (var db = new DataContext())
                 {
-                    db.Transactions.Remove(transaction);
+                    db.JournalEntries.Remove(journalEntry);
                     db.SaveChanges();
 
                 }
@@ -44,14 +45,14 @@ namespace DataAccess
             }
         }
 
-        public void Update(Transaction transaction)
+        public void Update(JournalEntry journalEntry)
         {
             try
             {
 
                 using (var db = new DataContext())
                 {
-                    db.Entry(transaction).State = System.Data.Entity.EntityState.Modified;
+                    db.Entry(journalEntry).State = System.Data.Entity.EntityState.Modified;
                     db.SaveChanges();
                 }
             }
@@ -61,16 +62,16 @@ namespace DataAccess
             }
         }
 
-        public List<Transaction> GetTransactions()
+        public List<JournalEntry> GetJournalEntries()
         {
-            List<Transaction> result = new List<Transaction>();
+            List<JournalEntry> result = new List<JournalEntry>();
 
             try
             {
 
                 using (var db = new DataContext())
                 {
-                    result = db.Transactions.ToList();
+                    result = db.JournalEntries.ToList();
                 }
             }
             catch (Exception ex)
@@ -81,14 +82,14 @@ namespace DataAccess
             return result;
         }
 
-        public Transaction GetTransaction(long transactionId)
+        public JournalEntry GetJournalEntry(long id)
         {
             try
             {
 
                 using (var db = new DataContext())
                 {
-                    return db.Transactions.Where(t => t.transaction_id == transactionId).FirstOrDefault();
+                    return db.JournalEntries.Where(t => t.id == id).FirstOrDefault();
                 }
             }
             catch (Exception ex)

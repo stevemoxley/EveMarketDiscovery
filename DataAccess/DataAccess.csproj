@@ -152,6 +152,7 @@
     <Compile Include="DataContext.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="JournalEntryDAO.cs" />
     <Compile Include="TransactionDAO.cs" />
   </ItemGroup>
   <ItemGroup>

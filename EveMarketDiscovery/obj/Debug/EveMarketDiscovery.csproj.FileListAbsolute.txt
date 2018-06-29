@@ -113,6 +113,8 @@ C:\Users\Steve\source\repos\EveMarketDiscovery\EveMarketDiscovery\bin\Debug\Newt
 C:\Users\Steve\source\repos\EveMarketDiscovery\EveMarketDiscovery\bin\Debug\EveMarketDiscovery.DataAnalysis.dll
 C:\Users\Steve\source\repos\EveMarketDiscovery\EveMarketDiscovery\bin\Debug\EveMarketDiscovery.DataAnalysis.pdb
 E:\Github\EveMarketDiscovery\EveMarketDiscovery\bin\Debug\items.txt
+E:\Github\EveMarketDiscovery\EveMarketDiscovery\bin\Debug\x86\e_sqlite3.dll
+E:\Github\EveMarketDiscovery\EveMarketDiscovery\bin\Debug\x64\e_sqlite3.dll
 E:\Github\EveMarketDiscovery\EveMarketDiscovery\bin\Debug\EveMarketDiscovery.exe.config
 E:\Github\EveMarketDiscovery\EveMarketDiscovery\bin\Debug\EveMarketDiscovery.exe
 E:\Github\EveMarketDiscovery\EveMarketDiscovery\bin\Debug\EveMarketDiscovery.pdb
@@ -239,5 +241,3 @@ E:\Github\EveMarketDiscovery\EveMarketDiscovery\obj\Debug\EveMarketDiscovery.csp
 E:\Github\EveMarketDiscovery\EveMarketDiscovery\obj\Debug\EveMarketDiscovery.csproj.CopyComplete
 E:\Github\EveMarketDiscovery\EveMarketDiscovery\obj\Debug\EveMarketDiscovery.exe
 E:\Github\EveMarketDiscovery\EveMarketDiscovery\obj\Debug\EveMarketDiscovery.pdb
-E:\Github\EveMarketDiscovery\EveMarketDiscovery\bin\Debug\x86\e_sqlite3.dll
-E:\Github\EveMarketDiscovery\EveMarketDiscovery\bin\Debug\x64\e_sqlite3.dll

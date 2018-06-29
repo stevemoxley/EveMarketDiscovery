@@ -35,7 +35,21 @@ namespace EveAccountant
             var buyTransactions = transactions.Where(t => t.is_buy).ToArray();
 
             SaveAllTransactions(transactions);
+            SaveAllJournalEntries(journalEntries);
             LoadDataTable(sellTransactions);
+        }
+
+        private void SaveAllJournalEntries(JournalEntry[] journalEntries)
+        {
+            var journalEntryDAO = new JournalEntryDAO();
+            foreach (var journalEntry in journalEntries)
+            {
+                var existingJournalEntry = journalEntryDAO.GetJournalEntry(journalEntry.id);
+                if(existingJournalEntry == null)
+                {
+                    journalEntryDAO.Add(journalEntry);
+                }
+            }
         }
 
         private void SaveAllTransactions(Transaction[] transactions)
@@ -47,7 +61,7 @@ namespace EveAccountant
                 var existingTransaction = transactionDAO.GetTransaction(transaction.transaction_id);
                 if(existingTransaction == null)
                 {
-                    transactionDAO.AddTransaction(transaction);
+                    transactionDAO.Add(transaction);
                 }
             }
         }
@@ -75,6 +89,12 @@ namespace EveAccountant
             }
 
             dataGridView1.DataSource = dt;
+        }
+
+        private void profitAndLossToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var pal = new ProfitAndLoss();
+            pal.Show();
         }
     }
 }

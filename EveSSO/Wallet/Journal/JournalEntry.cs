@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
 
 namespace EveSSO.Wallet.Journal
 {
     public class JournalEntry
     {
+        [Key]
+        public long key { get; set; }
         public float amount { get; set; }
         public float balance { get; set; }
         public DateTime date { get; set; }

@@ -1,4 +1,5 @@
-﻿using EveSSO.Wallet.Transactions;
+﻿using EveSSO.Wallet.Journal;
+using EveSSO.Wallet.Transactions;
 using SQLite.CodeFirst;
 using System;
 using System.Collections.Generic;
@@ -16,6 +17,8 @@ namespace DataAccess
         }
 
         public DbSet<Transaction> Transactions { get; set; }
+
+        public DbSet<JournalEntry> JournalEntries { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
