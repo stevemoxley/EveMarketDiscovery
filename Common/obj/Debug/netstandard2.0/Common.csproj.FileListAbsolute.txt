@@ -17,4 +17,10 @@ E:\Github\EveMarketDiscovery\Common\obj\Debug\netstandard2.0\Common.AssemblyInfo
 E:\Github\EveMarketDiscovery\Common\obj\Debug\netstandard2.0\Common.AssemblyInfo.cs
 E:\Github\EveMarketDiscovery\Common\obj\Debug\netstandard2.0\Common.dll
 E:\Github\EveMarketDiscovery\Common\obj\Debug\netstandard2.0\Common.pdb
-E:\Github\EveMarketDiscovery\Common\obj\Debug\netstandard2.0\Common.csprojAssemblyReference.cache
+E:\Github\EveMarketDiscovery\Common\bin\Debug\netstandard2.0\System.ComponentModel.DataAnnotations.dll
+E:\Github\EveMarketDiscovery\Common\bin\Debug\netstandard2.0\System.Configuration.dll
+E:\Github\EveMarketDiscovery\Common\bin\Debug\netstandard2.0\System.Security.dll
+E:\Github\EveMarketDiscovery\Common\bin\Debug\netstandard2.0\System.ComponentModel.DataAnnotations.xml
+E:\Github\EveMarketDiscovery\Common\bin\Debug\netstandard2.0\System.Configuration.xml
+E:\Github\EveMarketDiscovery\Common\bin\Debug\netstandard2.0\System.Security.xml
+E:\Github\EveMarketDiscovery\Common\obj\Debug\netstandard2.0\Common.csproj.CopyComplete

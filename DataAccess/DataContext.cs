@@ -1,4 +1,4 @@
-﻿using Common.Models;
+﻿using EveSSO.Wallet.Transactions;
 using SQLite.CodeFirst;
 using System;
 using System.Collections.Generic;
@@ -19,7 +19,7 @@ namespace DataAccess
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            var sqliteConectionInitializer = new SqliteCreateDatabaseIfNotExists<DataContext>(modelBuilder);
+            var sqliteConectionInitializer = new SqliteDropCreateDatabaseWhenModelChanges<DataContext>(modelBuilder);
             Database.SetInitializer(sqliteConectionInitializer);
         }
 

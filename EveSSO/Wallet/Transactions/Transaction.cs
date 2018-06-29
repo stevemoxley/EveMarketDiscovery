@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
 
 namespace EveSSO.Wallet.Transactions
@@ -7,6 +8,8 @@ namespace EveSSO.Wallet.Transactions
 
     public class Transaction
     {
+        [Key]
+        public long key { get; set; }
         public long client_id { get; set; }
         public DateTime date { get; set; }
         public bool is_buy { get; set; }

@@ -20,31 +20,7 @@ namespace EveMarketDiscovery
             Console.WriteLine("Eve Market Discovery");
             Console.WriteLine("-------------------------");
 
-            try
-            {
-
-                using (var db = new DataContext())
-                {
-                    var transactions = db.Transactions.ToList();
-
-                    db.Transactions.Add(new Common.Models.Transaction
-                    {
-                        DateTime = DateTime.Now,
-                        Price = 100,
-                        Quantity = 10,
-                        TypeId = 1,
-                        LocationId = 100
-                    });
-                    db.SaveChanges();
-
-                }
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-
-
+            var transactionDAO = new TransactionDAO();
             //long jitaRegionId = 10000002;
             //long amarrRegionId = 10000043;
             //long heimatarRegionId - rens = 10000030;
@@ -91,7 +67,6 @@ namespace EveMarketDiscovery
 
         static void GetOrderAnalysis(EveMarketData data, int itemLimit)
         {
-
             var orderDataAnalyzer = new EveMarketOrdersDataAnalyzer(data);
 
             long hek = 10000042;

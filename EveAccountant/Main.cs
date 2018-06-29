@@ -1,4 +1,5 @@
 ﻿using Common;
+using DataAccess;
 using EveSSO.Wallet.Journal;
 using EveSSO.Wallet.Transactions;
 using System;
@@ -29,9 +30,26 @@ namespace EveAccountant
         private void button1_Click(object sender, EventArgs e)
         {
             var journalEntries = JournalProvider.GetCharacterJournal(AuthenticationManager.CharacterInfo.CharacterID, AuthenticationManager.AccessToken.access_token);
-            var transactions = TransactionsProvider.GetCharacterTransactions(AuthenticationManager.CharacterInfo.CharacterID, AuthenticationManager.AccessToken.access_token).Where( t=> !t.is_buy).ToArray();
-            var buyTransactions = TransactionsProvider.GetCharacterTransactions(AuthenticationManager.CharacterInfo.CharacterID, AuthenticationManager.AccessToken.access_token).Where(t => t.is_buy).ToArray();
-            LoadDataTable(transactions);
+            var transactions = TransactionsProvider.GetCharacterTransactions(AuthenticationManager.CharacterInfo.CharacterID, AuthenticationManager.AccessToken.access_token);
+            var sellTransactions = transactions.Where( t=> !t.is_buy).ToArray();
+            var buyTransactions = transactions.Where(t => t.is_buy).ToArray();
+
+            SaveAllTransactions(transactions);
+            LoadDataTable(sellTransactions);
+        }
+
+        private void SaveAllTransactions(Transaction[] transactions)
+        {
+            var transactionDAO = new TransactionDAO();
+            foreach (var transaction in transactions)
+            {
+                //See if it exists
+                var existingTransaction = transactionDAO.GetTransaction(transaction.transaction_id);
+                if(existingTransaction == null)
+                {
+                    transactionDAO.AddTransaction(transaction);
+                }
+            }
         }
 
         private void LoadDataTable(Transaction[] transactions)
