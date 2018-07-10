@@ -24,3 +24,4 @@ E:\Github\EveMarketDiscovery\Common\obj\Debug\netstandard2.0\Common.AssemblyInfo
 E:\Github\EveMarketDiscovery\Common\obj\Debug\netstandard2.0\Common.csproj.CopyComplete
 E:\Github\EveMarketDiscovery\Common\obj\Debug\netstandard2.0\Common.dll
 E:\Github\EveMarketDiscovery\Common\obj\Debug\netstandard2.0\Common.pdb
+E:\Github\EveMarketDiscovery\Common\obj\Debug\netstandard2.0\Common.csprojAssemblyReference.cache

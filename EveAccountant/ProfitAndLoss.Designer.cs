@@ -31,15 +31,16 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.lblTotalProfit = new System.Windows.Forms.Label();
             this.lblFees = new System.Windows.Forms.Label();
+            this.lblUnsoldInventory = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 117);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 221);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(776, 321);
+            this.dataGridView1.Size = new System.Drawing.Size(836, 353);
             this.dataGridView1.TabIndex = 0;
             // 
             // lblTotalProfit
@@ -60,11 +61,21 @@
             this.lblFees.TabIndex = 2;
             this.lblFees.Text = "Total Fees: ";
             // 
+            // lblUnsoldInventory
+            // 
+            this.lblUnsoldInventory.AutoSize = true;
+            this.lblUnsoldInventory.Location = new System.Drawing.Point(12, 87);
+            this.lblUnsoldInventory.Name = "lblUnsoldInventory";
+            this.lblUnsoldInventory.Size = new System.Drawing.Size(90, 13);
+            this.lblUnsoldInventory.TabIndex = 3;
+            this.lblUnsoldInventory.Text = "Unsold Inventory:";
+            // 
             // ProfitAndLoss
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(860, 586);
+            this.Controls.Add(this.lblUnsoldInventory);
             this.Controls.Add(this.lblFees);
             this.Controls.Add(this.lblTotalProfit);
             this.Controls.Add(this.dataGridView1);
@@ -82,5 +93,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label lblTotalProfit;
         private System.Windows.Forms.Label lblFees;
+        private System.Windows.Forms.Label lblUnsoldInventory;
     }
 }
