@@ -24,7 +24,7 @@ namespace EveAccountant
 
             webBrowser1.Navigate(GetAuthenticationUrl(callBackUrl, clientId, scopes, ""));
             webBrowser1.ScriptErrorsSuppressed = true;
-        }
+        }          
 
         private void Authentication_Load(object sender, EventArgs e)
         {
@@ -73,9 +73,11 @@ namespace EveAccountant
             var content = new FormUrlEncodedContent(values);
             var response = await httpClient.PostAsync("https://login.eveonline.com/oauth/token", content);
             var responseString = await response.Content.ReadAsStringAsync();
-            var accessToken = JsonConvert.DeserializeObject<AccessToken>(responseString);
-            AuthenticationManager.AccessToken = accessToken;
-            GetCharacterInformation(accessToken);
+
+            var authTokens = JsonConvert.DeserializeObject<AuthTokens>(responseString);
+            authTokens.expiration_time = DateTime.Now + new TimeSpan(0, 0, authTokens.expires_in);
+            AuthenticationManager.AuthTokens = authTokens;
+            GetCharacterInformation(authTokens);
             this.Close();
             MessageBox.Show("Authentication Successful!");
         }
@@ -86,7 +88,7 @@ namespace EveAccountant
             return System.Convert.ToBase64String(plainTextBytes);
         }
 
-        private async void GetCharacterInformation(AccessToken accessToken)
+        private async void GetCharacterInformation(AuthTokens accessToken)
         {
             var client = new HttpClient();
             client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", accessToken.access_token);
@@ -101,15 +103,15 @@ namespace EveAccountant
         private string clientId = "b4d2612fa3bd497486e71d4a26465953";
         private string secretKey = "hgg6KfFbexI3rIFJNHbmceGd0RuWMYQmJfcDLedQ";
 
-
     }
 
-    public class AccessToken
+    public class AuthTokens
     {
         public string access_token { get; set; }
         public string token_type { get; set; }
         public int expires_in { get; set; }
         public string refresh_token { get; set; }
+        public DateTime expiration_time { get; set; }
     }
 
 
