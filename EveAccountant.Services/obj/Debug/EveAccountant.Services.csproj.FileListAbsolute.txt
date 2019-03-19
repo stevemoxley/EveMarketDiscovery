@@ -1,4 +1,3 @@
-D:\Github\EveMarketDiscovery\EveAccountant.Services\bin\Debug\items.txt
 D:\Github\EveMarketDiscovery\EveAccountant.Services\bin\Debug\x86\e_sqlite3.dll
 D:\Github\EveMarketDiscovery\EveAccountant.Services\bin\Debug\x64\e_sqlite3.dll
 D:\Github\EveMarketDiscovery\EveAccountant.Services\bin\Debug\EMD.sqlite
@@ -119,5 +118,3 @@ D:\Github\EveMarketDiscovery\EveAccountant.Services\bin\Debug\EveAccountant.Serv
 D:\Github\EveMarketDiscovery\EveAccountant.Services\bin\Debug\Newtonsoft.Json.dll
 D:\Github\EveMarketDiscovery\EveAccountant.Services\bin\Debug\Newtonsoft.Json.pdb
 D:\Github\EveMarketDiscovery\EveAccountant.Services\bin\Debug\Newtonsoft.Json.xml
-D:\Github\EveMarketDiscovery\EveAccountant.Services\bin\Debug\char.txt
-D:\Github\EveMarketDiscovery\EveAccountant.Services\bin\Debug\auth.txt

@@ -138,9 +138,6 @@ D:\Github\EveMarketDiscovery\EveAccountantWeb\bin\roslyn\System.Security.Cryptog
 D:\Github\EveMarketDiscovery\EveAccountantWeb\bin\roslyn\System.ValueTuple.dll
 D:\Github\EveMarketDiscovery\EveAccountantWeb\bin\EveAccountant.Services.dll.config
 D:\Github\EveMarketDiscovery\EveAccountantWeb\bin\Newtonsoft.Json.pdb
-D:\Github\EveMarketDiscovery\EveAccountantWeb\bin\x86\e_sqlite3.dll
-D:\Github\EveMarketDiscovery\EveAccountantWeb\bin\x64\e_sqlite3.dll
 D:\Github\EveMarketDiscovery\EveAccountantWeb\bin\char.txt
 D:\Github\EveMarketDiscovery\EveAccountantWeb\bin\auth.txt
 D:\Github\EveMarketDiscovery\EveAccountantWeb\bin\items.txt
-D:\Github\EveMarketDiscovery\EveAccountantWeb\bin\EMD.sqlite

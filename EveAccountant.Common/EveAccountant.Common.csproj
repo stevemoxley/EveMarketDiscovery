@@ -46,17 +46,11 @@
     <Compile Include="RegionProvider.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="items.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    <None Include="items.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="char.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="auth.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Content Include="char.txt" />
+    <Content Include="auth.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

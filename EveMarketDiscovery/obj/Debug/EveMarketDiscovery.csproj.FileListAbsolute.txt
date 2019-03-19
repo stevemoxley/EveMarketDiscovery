@@ -241,7 +241,6 @@ E:\Github\EveMarketDiscovery\EveMarketDiscovery\obj\Debug\EveMarketDiscovery.csp
 E:\Github\EveMarketDiscovery\EveMarketDiscovery\obj\Debug\EveMarketDiscovery.csproj.CopyComplete
 E:\Github\EveMarketDiscovery\EveMarketDiscovery\obj\Debug\EveMarketDiscovery.exe
 E:\Github\EveMarketDiscovery\EveMarketDiscovery\obj\Debug\EveMarketDiscovery.pdb
-D:\Github\EveMarketDiscovery\EveMarketDiscovery\bin\Debug\items.txt
 D:\Github\EveMarketDiscovery\EveMarketDiscovery\bin\Debug\x86\e_sqlite3.dll
 D:\Github\EveMarketDiscovery\EveMarketDiscovery\bin\Debug\x64\e_sqlite3.dll
 D:\Github\EveMarketDiscovery\EveMarketDiscovery\bin\Debug\EMD.sqlite
@@ -371,5 +370,3 @@ D:\Github\EveMarketDiscovery\EveMarketDiscovery\obj\Debug\EveMarketDiscovery.csp
 D:\Github\EveMarketDiscovery\EveMarketDiscovery\obj\Debug\EveMarketDiscovery.csproj.CopyComplete
 D:\Github\EveMarketDiscovery\EveMarketDiscovery\obj\Debug\EveMarketDiscovery.exe
 D:\Github\EveMarketDiscovery\EveMarketDiscovery\obj\Debug\EveMarketDiscovery.pdb
-D:\Github\EveMarketDiscovery\EveMarketDiscovery\bin\Debug\char.txt
-D:\Github\EveMarketDiscovery\EveMarketDiscovery\bin\Debug\auth.txt

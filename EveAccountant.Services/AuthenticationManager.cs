@@ -229,8 +229,8 @@ namespace EveAccountant.Services
         private static AuthTokens authTokens;
         private static CharacterInfo characterInfo;
 
-        private static string accessTokenFile = System.Web.HttpContext.Current.Server.MapPath("~/bin/auth.txt");
-        private static string characterIdFile = System.Web.HttpContext.Current.Server.MapPath("~/bin/char.txt");
+        private static string accessTokenFile = System.Web.HttpContext.Current.Server.MapPath("~/auth.txt");
+        private static string characterIdFile = System.Web.HttpContext.Current.Server.MapPath("~/char.txt");
 
         private static string clientId = "b4d2612fa3bd497486e71d4a26465953";
         private static string secretKey = "hgg6KfFbexI3rIFJNHbmceGd0RuWMYQmJfcDLedQ";

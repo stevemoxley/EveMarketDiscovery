@@ -18,7 +18,7 @@ namespace EveAccountant.Common
 
             try
             {
-                text = File.ReadAllLines(System.Web.HttpContext.Current.Server.MapPath(@"bin\items.txt"));
+                text = File.ReadAllLines(System.Web.HttpContext.Current.Server.MapPath(@"items.txt"));
             }
             catch (NullReferenceException ex)
             {

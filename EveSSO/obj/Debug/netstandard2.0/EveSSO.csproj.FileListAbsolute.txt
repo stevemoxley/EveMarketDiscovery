@@ -30,7 +30,6 @@ E:\Github\EveMarketDiscovery\EveSSO\obj\Debug\netstandard2.0\EveSSO.AssemblyInfo
 E:\Github\EveMarketDiscovery\EveSSO\obj\Debug\netstandard2.0\EveSSO.csproj.CopyComplete
 E:\Github\EveMarketDiscovery\EveSSO\obj\Debug\netstandard2.0\EveSSO.dll
 E:\Github\EveMarketDiscovery\EveSSO\obj\Debug\netstandard2.0\EveSSO.pdb
-D:\Github\EveMarketDiscovery\EveSSO\bin\Debug\netstandard2.0\items.txt
 D:\Github\EveMarketDiscovery\EveSSO\bin\Debug\netstandard2.0\EveSSO.deps.json
 D:\Github\EveMarketDiscovery\EveSSO\bin\Debug\netstandard2.0\EveSSO.dll
 D:\Github\EveMarketDiscovery\EveSSO\bin\Debug\netstandard2.0\EveSSO.pdb
@@ -49,5 +48,3 @@ D:\Github\EveMarketDiscovery\EveSSO\obj\Debug\netstandard2.0\EveSSO.AssemblyInfo
 D:\Github\EveMarketDiscovery\EveSSO\obj\Debug\netstandard2.0\EveSSO.csproj.CopyComplete
 D:\Github\EveMarketDiscovery\EveSSO\obj\Debug\netstandard2.0\EveSSO.dll
 D:\Github\EveMarketDiscovery\EveSSO\obj\Debug\netstandard2.0\EveSSO.pdb
-D:\Github\EveMarketDiscovery\EveSSO\bin\Debug\netstandard2.0\char.txt
-D:\Github\EveMarketDiscovery\EveSSO\bin\Debug\netstandard2.0\auth.txt

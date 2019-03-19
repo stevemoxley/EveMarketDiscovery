@@ -172,7 +172,6 @@ E:\Github\EveMarketDiscovery\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileI
 E:\Github\EveMarketDiscovery\DataAccess\obj\Debug\DataAccess.csproj.CopyComplete
 E:\Github\EveMarketDiscovery\DataAccess\obj\Debug\DataAccess.dll
 E:\Github\EveMarketDiscovery\DataAccess\obj\Debug\DataAccess.pdb
-D:\Github\EveMarketDiscovery\DataAccess\bin\Debug\items.txt
 D:\Github\EveMarketDiscovery\DataAccess\bin\Debug\x86\e_sqlite3.dll
 D:\Github\EveMarketDiscovery\DataAccess\bin\Debug\x64\e_sqlite3.dll
 D:\Github\EveMarketDiscovery\DataAccess\bin\Debug\EMD.sqlite
@@ -347,5 +346,3 @@ D:\Github\EveMarketDiscovery\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileI
 D:\Github\EveMarketDiscovery\DataAccess\obj\Debug\DataAccess.csproj.CopyComplete
 D:\Github\EveMarketDiscovery\DataAccess\obj\Debug\DataAccess.dll
 D:\Github\EveMarketDiscovery\DataAccess\obj\Debug\DataAccess.pdb
-D:\Github\EveMarketDiscovery\DataAccess\bin\Debug\char.txt
-D:\Github\EveMarketDiscovery\DataAccess\bin\Debug\auth.txt

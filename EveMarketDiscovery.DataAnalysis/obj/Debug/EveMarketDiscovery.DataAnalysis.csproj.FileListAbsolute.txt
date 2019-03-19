@@ -214,7 +214,6 @@ E:\Github\EveMarketDiscovery\EveMarketDiscovery.DataAnalysis\obj\Debug\EveMarket
 E:\Github\EveMarketDiscovery\EveMarketDiscovery.DataAnalysis\obj\Debug\EveMarketDiscovery.DataAnalysis.csproj.CopyComplete
 E:\Github\EveMarketDiscovery\EveMarketDiscovery.DataAnalysis\obj\Debug\EveMarketDiscovery.DataAnalysis.dll
 E:\Github\EveMarketDiscovery\EveMarketDiscovery.DataAnalysis\obj\Debug\EveMarketDiscovery.DataAnalysis.pdb
-D:\Github\EveMarketDiscovery\EveMarketDiscovery.DataAnalysis\bin\Debug\items.txt
 D:\Github\EveMarketDiscovery\EveMarketDiscovery.DataAnalysis\bin\Debug\EveMarketDiscovery.DataAnalysis.dll
 D:\Github\EveMarketDiscovery\EveMarketDiscovery.DataAnalysis\bin\Debug\EveMarketDiscovery.DataAnalysis.pdb
 D:\Github\EveMarketDiscovery\EveMarketDiscovery.DataAnalysis\bin\Debug\Microsoft.Win32.Primitives.dll
@@ -322,5 +321,3 @@ D:\Github\EveMarketDiscovery\EveMarketDiscovery.DataAnalysis\obj\Debug\EveMarket
 D:\Github\EveMarketDiscovery\EveMarketDiscovery.DataAnalysis\obj\Debug\EveMarketDiscovery.DataAnalysis.csproj.CopyComplete
 D:\Github\EveMarketDiscovery\EveMarketDiscovery.DataAnalysis\obj\Debug\EveMarketDiscovery.DataAnalysis.dll
 D:\Github\EveMarketDiscovery\EveMarketDiscovery.DataAnalysis\obj\Debug\EveMarketDiscovery.DataAnalysis.pdb
-D:\Github\EveMarketDiscovery\EveMarketDiscovery.DataAnalysis\bin\Debug\char.txt
-D:\Github\EveMarketDiscovery\EveMarketDiscovery.DataAnalysis\bin\Debug\auth.txt
