@@ -1,0 +1,13 @@
+﻿@model EveAccountant.Services.AccountingReport
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Reports</h2>
+
+
+<div>Revenue: @Model.TotalRevenue</div>
+<div>Cost: @Model.TotalCost</div>
+

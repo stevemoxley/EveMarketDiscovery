@@ -51,9 +51,9 @@
     <Compile Include="History\RegionItemHistoryComparison.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Common\Common.csproj">
-      <Project>{46893780-4b06-47e0-bbe0-cef0261dad9f}</Project>
-      <Name>Common</Name>
+    <ProjectReference Include="..\EveAccountant.Common\EveAccountant.Common.csproj">
+      <Project>{8e965d2f-bffc-4111-a368-01bc069cb240}</Project>
+      <Name>EveAccountant.Common</Name>
     </ProjectReference>
     <ProjectReference Include="..\EveSSO\EveSSO.csproj">
       <Project>{73bb4d1a-0388-4b8b-94ff-40f53fb64aa2}</Project>

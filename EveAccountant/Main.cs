@@ -1,4 +1,4 @@
-﻿using Common;
+﻿using EveAccountant.Common;
 using DataAccess;
 using EveSSO.Wallet.Journal;
 using EveSSO.Wallet.Transactions;

@@ -1,4 +1,4 @@
-﻿using Common;
+﻿using EveAccountant.Common;
 using EveSSO;
 using System;
 using System.Collections.Generic;

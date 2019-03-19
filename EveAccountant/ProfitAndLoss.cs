@@ -1,5 +1,4 @@
-﻿using Common;
-using DataAccess;
+﻿using DataAccess;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using EveAccountant.Common;
 
 namespace EveAccountant
 {
@@ -84,7 +84,7 @@ namespace EveAccountant
 
                 float revenue = sellOrders.Sum(s => s.quantity * s.unit_price);
                 float cost = 0;
-                float profit = 0; //Profit would be the number I actually sold times the price of those things sold
+                float profit = 0; 
                 float unsold = 0;
 
                 var totalLeft = quantitySold;

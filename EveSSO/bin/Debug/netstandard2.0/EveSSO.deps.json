@@ -9,7 +9,7 @@
     ".NETStandard,Version=v2.0/": {
       "EveSSO/1.0.0": {
         "dependencies": {
-          "Common": "1.0.0",
+          "EveAccountant.Common": "1.0.0",
           "NETStandard.Library": "2.0.1",
           "Newtonsoft.Json": "11.0.2",
           "System.ComponentModel.DataAnnotations": "4.0.0.0"
@@ -29,9 +29,9 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
-      "Common/1.0.0": {
+      "EveAccountant.Common/1.0.0": {
         "runtime": {
-          "Common.dll": {}
+          "EveAccountant.Common.dll": {}
         }
       },
       "System.ComponentModel.DataAnnotations/4.0.0.0": {
@@ -68,7 +68,7 @@
       "path": "newtonsoft.json/11.0.2",
       "hashPath": "newtonsoft.json.11.0.2.nupkg.sha512"
     },
-    "Common/1.0.0": {
+    "EveAccountant.Common/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

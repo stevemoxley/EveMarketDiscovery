@@ -35,14 +35,13 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
-      "Common/1.0.0": {
+      "EveAccountant.Common/1.0.0": {
         "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
         "compile": {
-          "bin/placeholder/Common.dll": {}
+          "bin/placeholder/EveAccountant.Common.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Common.dll": {}
+          "bin/placeholder/EveAccountant.Common.dll": {}
         }
       }
     }
@@ -217,15 +216,15 @@
         "newtonsoft.json.nuspec"
       ]
     },
-    "Common/1.0.0": {
+    "EveAccountant.Common/1.0.0": {
       "type": "project",
-      "path": "../Common/Common.csproj",
-      "msbuildProject": "../Common/Common.csproj"
+      "path": "../EveAccountant.Common/EveAccountant.Common.csproj",
+      "msbuildProject": "../EveAccountant.Common/EveAccountant.Common.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
-      "Common >= 1.0.0",
+      "EveAccountant.Common >= 1.0.0",
       "NETStandard.Library >= 2.0.1",
       "Newtonsoft.Json >= 11.0.2"
     ]
@@ -237,11 +236,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Github\\EveMarketDiscovery\\EveSSO\\EveSSO.csproj",
+      "projectUniqueName": "D:\\Github\\EveMarketDiscovery\\EveSSO\\EveSSO.csproj",
       "projectName": "EveSSO",
-      "projectPath": "E:\\Github\\EveMarketDiscovery\\EveSSO\\EveSSO.csproj",
+      "projectPath": "D:\\Github\\EveMarketDiscovery\\EveSSO\\EveSSO.csproj",
       "packagesPath": "C:\\Users\\Steve\\.nuget\\packages\\",
-      "outputPath": "E:\\Github\\EveMarketDiscovery\\EveSSO\\obj\\",
+      "outputPath": "D:\\Github\\EveMarketDiscovery\\EveSSO\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -260,8 +259,8 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "E:\\Github\\EveMarketDiscovery\\Common\\Common.csproj": {
-              "projectPath": "E:\\Github\\EveMarketDiscovery\\Common\\Common.csproj"
+            "D:\\Github\\EveMarketDiscovery\\EveAccountant.Common\\EveAccountant.Common.csproj": {
+              "projectPath": "D:\\Github\\EveMarketDiscovery\\EveAccountant.Common\\EveAccountant.Common.csproj"
             }
           }
         }

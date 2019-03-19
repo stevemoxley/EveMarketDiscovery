@@ -4,8 +4,8 @@ using System.Collections.Generic;
 using System.Net;
 using System.Text;
 using System.IO;
-using Common;
 using System.Linq;
+using EveAccountant.Common;
 
 namespace EveSSO.Market.History
 {

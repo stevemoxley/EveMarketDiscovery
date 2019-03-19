@@ -71,13 +71,13 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Common\Common.csproj">
-      <Project>{46893780-4b06-47e0-bbe0-cef0261dad9f}</Project>
-      <Name>Common</Name>
-    </ProjectReference>
     <ProjectReference Include="..\DataAccess\DataAccess.csproj">
       <Project>{d745932d-8dbb-4301-b2b8-b6206534c481}</Project>
       <Name>DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EveAccountant.Common\EveAccountant.Common.csproj">
+      <Project>{8e965d2f-bffc-4111-a368-01bc069cb240}</Project>
+      <Name>EveAccountant.Common</Name>
     </ProjectReference>
     <ProjectReference Include="..\EveMarketDiscovery.DataAnalysis\EveMarketDiscovery.DataAnalysis.csproj">
       <Project>{91A02912-A739-48D1-9F89-FE32B28D4300}</Project>

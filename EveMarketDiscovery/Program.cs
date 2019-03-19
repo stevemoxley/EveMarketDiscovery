@@ -1,4 +1,4 @@
-﻿using Common;
+﻿using EveAccountant.Common;
 using DataAccess;
 using EveMarketDiscovery.DataAnalysis;
 using EveMarketDiscovery.DataAnalysis.History;
