@@ -29,42 +29,10 @@ namespace EveAccountant
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var journalEntries = JournalProvider.GetCharacterJournal(AuthenticationManager.CharacterInfo.CharacterID, AuthenticationManager.AuthTokens.access_token);
-            var transactions = TransactionsProvider.GetCharacterTransactions(AuthenticationManager.CharacterInfo.CharacterID, AuthenticationManager.AuthTokens.access_token);
-            var sellTransactions = transactions.Where( t=> !t.is_buy).ToArray();
-            var buyTransactions = transactions.Where(t => t.is_buy).ToArray();
-
-            SaveAllTransactions(transactions);
-            SaveAllJournalEntries(journalEntries);
-            LoadDataTable(sellTransactions);
+                        //LoadDataTable(sellTransactions);
         }
 
-        private void SaveAllJournalEntries(JournalEntry[] journalEntries)
-        {
-            var journalEntryDAO = new JournalEntryDAO();
-            foreach (var journalEntry in journalEntries)
-            {
-                var existingJournalEntry = journalEntryDAO.GetJournalEntry(journalEntry.id);
-                if(existingJournalEntry == null)
-                {
-                    journalEntryDAO.Add(journalEntry);
-                }
-            }
-        }
-
-        private void SaveAllTransactions(Transaction[] transactions)
-        {
-            var transactionDAO = new TransactionDAO();
-            foreach (var transaction in transactions)
-            {
-                //See if it exists
-                var existingTransaction = transactionDAO.GetTransaction(transaction.transaction_id);
-                if(existingTransaction == null)
-                {
-                    transactionDAO.Add(transaction);
-                }
-            }
-        }
+ 
 
         private void LoadDataTable(Transaction[] transactions)
         {

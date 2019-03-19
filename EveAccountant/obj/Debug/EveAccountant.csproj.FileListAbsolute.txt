@@ -369,3 +369,5 @@ D:\Github\EveMarketDiscovery\EveAccountant\obj\Debug\EveAccountant.csproj.CoreCo
 D:\Github\EveMarketDiscovery\EveAccountant\obj\Debug\EveAccountant.csproj.CopyComplete
 D:\Github\EveMarketDiscovery\EveAccountant\obj\Debug\EveAccountant.exe
 D:\Github\EveMarketDiscovery\EveAccountant\obj\Debug\EveAccountant.pdb
+D:\Github\EveMarketDiscovery\EveAccountant\bin\Debug\char.txt
+D:\Github\EveMarketDiscovery\EveAccountant\bin\Debug\auth.txt

@@ -13,7 +13,7 @@
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
+                    <span class="icon-bar">Eve Online Auth</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
@@ -21,9 +21,14 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
+                    @Html.ActionLink("Auth", "AuthUrl", "SSO")
+                    @if (EveAccountant.Services.AuthenticationManager.IsAuthorized())
+                    {
+                        @Html.ActionLink("Load", "Load", "SSO")
+                    }
                     @*<li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@
+                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
@@ -32,9 +37,7 @@
     <div class="container body-content">
         @RenderBody()
         <hr />
-        <footer>
-           
-        </footer>
+        <footer></footer>
     </div>
 
     @Scripts.Render("~/bundles/jquery")

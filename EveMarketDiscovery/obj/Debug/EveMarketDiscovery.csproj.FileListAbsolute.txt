@@ -371,3 +371,5 @@ D:\Github\EveMarketDiscovery\EveMarketDiscovery\obj\Debug\EveMarketDiscovery.csp
 D:\Github\EveMarketDiscovery\EveMarketDiscovery\obj\Debug\EveMarketDiscovery.csproj.CopyComplete
 D:\Github\EveMarketDiscovery\EveMarketDiscovery\obj\Debug\EveMarketDiscovery.exe
 D:\Github\EveMarketDiscovery\EveMarketDiscovery\obj\Debug\EveMarketDiscovery.pdb
+D:\Github\EveMarketDiscovery\EveMarketDiscovery\bin\Debug\char.txt
+D:\Github\EveMarketDiscovery\EveMarketDiscovery\bin\Debug\auth.txt

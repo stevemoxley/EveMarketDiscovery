@@ -49,3 +49,5 @@ D:\Github\EveMarketDiscovery\EveSSO\obj\Debug\netstandard2.0\EveSSO.AssemblyInfo
 D:\Github\EveMarketDiscovery\EveSSO\obj\Debug\netstandard2.0\EveSSO.csproj.CopyComplete
 D:\Github\EveMarketDiscovery\EveSSO\obj\Debug\netstandard2.0\EveSSO.dll
 D:\Github\EveMarketDiscovery\EveSSO\obj\Debug\netstandard2.0\EveSSO.pdb
+D:\Github\EveMarketDiscovery\EveSSO\bin\Debug\netstandard2.0\char.txt
+D:\Github\EveMarketDiscovery\EveSSO\bin\Debug\netstandard2.0\auth.txt

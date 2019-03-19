@@ -347,3 +347,5 @@ D:\Github\EveMarketDiscovery\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileI
 D:\Github\EveMarketDiscovery\DataAccess\obj\Debug\DataAccess.csproj.CopyComplete
 D:\Github\EveMarketDiscovery\DataAccess\obj\Debug\DataAccess.dll
 D:\Github\EveMarketDiscovery\DataAccess\obj\Debug\DataAccess.pdb
+D:\Github\EveMarketDiscovery\DataAccess\bin\Debug\char.txt
+D:\Github\EveMarketDiscovery\DataAccess\bin\Debug\auth.txt

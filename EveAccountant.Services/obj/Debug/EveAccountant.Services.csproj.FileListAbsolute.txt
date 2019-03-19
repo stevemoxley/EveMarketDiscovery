@@ -115,3 +115,9 @@ D:\Github\EveMarketDiscovery\EveAccountant.Services\obj\Debug\EveAccountant.Serv
 D:\Github\EveMarketDiscovery\EveAccountant.Services\obj\Debug\EveAccountant.Services.csproj.CopyComplete
 D:\Github\EveMarketDiscovery\EveAccountant.Services\obj\Debug\EveAccountant.Services.dll
 D:\Github\EveMarketDiscovery\EveAccountant.Services\obj\Debug\EveAccountant.Services.pdb
+D:\Github\EveMarketDiscovery\EveAccountant.Services\bin\Debug\EveAccountant.Services.dll.config
+D:\Github\EveMarketDiscovery\EveAccountant.Services\bin\Debug\Newtonsoft.Json.dll
+D:\Github\EveMarketDiscovery\EveAccountant.Services\bin\Debug\Newtonsoft.Json.pdb
+D:\Github\EveMarketDiscovery\EveAccountant.Services\bin\Debug\Newtonsoft.Json.xml
+D:\Github\EveMarketDiscovery\EveAccountant.Services\bin\Debug\char.txt
+D:\Github\EveMarketDiscovery\EveAccountant.Services\bin\Debug\auth.txt

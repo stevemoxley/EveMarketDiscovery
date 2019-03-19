@@ -8,6 +8,8 @@
 <h2>Reports</h2>
 
 
-<div>Revenue: @Model.TotalRevenue</div>
-<div>Cost: @Model.TotalCost</div>
+<div>Revenue: @Model.TotalRevenue.ToString("c")</div>
+<div>Cost: @Model.TotalCost.ToString("c")</div>
+<div>Profit: @Model.TotalProfit.ToString("c")</div>
+<div>Unsold Inventory: @Model.TotalUnsoldInventory.ToString("c")</div>
 

@@ -41,22 +41,7 @@ namespace EveAccountant
 
             return url;
         }
-
-        private void webBrowser1_Navigated(object sender, WebBrowserNavigatedEventArgs e)
-        {
-            if (e.Url.AbsolutePath.Contains("/account/logon"))
-            {
-
-            }
-            else if (e.Url.AbsoluteUri.Contains("/export/callback/"))
-            {
-                var redirectedUrl = e.Url.AbsoluteUri;
-                var queryStringParameters = HttpUtility.ParseQueryString(e.Url.Query);
-                var code = queryStringParameters[0];
-
-                PostAuthCheck(code);
-            }
-        }
+               
 
         private async void PostAuthCheck(string code)
         {
@@ -97,6 +82,22 @@ namespace EveAccountant
             var charInfo = JsonConvert.DeserializeObject<CharacterInfo>(await client.GetStringAsync("https://esi.tech.ccp.is/verify/"));
 
             AuthenticationManager.CharacterInfo = charInfo;
+        }
+
+        private void webBrowser1_Navigated(object sender, WebBrowserNavigatedEventArgs e)
+        {
+            if (e.Url.AbsolutePath.Contains("/account/logon"))
+            {
+
+            }
+            else if (e.Url.AbsoluteUri.Contains("/export/callback/"))
+            {
+                var redirectedUrl = e.Url.AbsoluteUri;
+                var queryStringParameters = HttpUtility.ParseQueryString(e.Url.Query);
+                var code = queryStringParameters[0];
+
+                PostAuthCheck(code);
+            }
         }
 
         private string callBackUrl = "http://localhost/export/callback/";

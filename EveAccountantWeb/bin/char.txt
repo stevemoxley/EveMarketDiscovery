@@ -1,0 +1,1 @@
+{"CharacterID":"94645676","CharacterName":"Steve Moxley","ExpiresOn":"2019-03-19T03:28:19","Scopes":"esi-wallet.read_character_wallet.v1 esi-markets.read_character_orders.v1","TokenType":"Character","CharacterOwnerHash":"XQYfF3t4RM/NDPGqEHVsqCN5QGg="}
