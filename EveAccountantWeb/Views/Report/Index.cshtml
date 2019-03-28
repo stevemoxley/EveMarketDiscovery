@@ -13,3 +13,31 @@
 <div>Profit: @Model.TotalProfit.ToString("c")</div>
 <div>Unsold Inventory: @Model.TotalUnsoldInventory.ToString("c")</div>
 
+
+<style>
+    table tr td {
+        padding:5px;
+    }
+</style>
+
+
+<table>
+    <tr>
+        <th>Date</th>
+        <th>Type</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Price Extended</th>
+    </tr>
+    @foreach (var transaction in Model.Transactions.OrderByDescending(t => t.date))
+    {
+        <tr>
+            <td>@transaction.date</td>
+            <td>@transaction.type</td>
+            <td>@transaction.unit_price.ToString("c")</td>
+            <td>@transaction.quantity</td>
+            <td>@((transaction.unit_price * transaction.quantity).ToString("c"))</td>
+        </tr>
+    }
+</table>
+

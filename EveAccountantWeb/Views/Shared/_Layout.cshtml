@@ -21,11 +21,15 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
+                    @*@if (User.Identity.IsAuthenticated)
+                        {
+                            @Html.ActionLink("Auth", "AuthUrl", "SSO")
+
+                            @Html.ActionLink("Load", "Load", "SSO")
+                        }*@
                     @Html.ActionLink("Auth", "AuthUrl", "SSO")
-                    @if (EveAccountant.Services.AuthenticationManager.IsAuthorized())
-                    {
-                        @Html.ActionLink("Load", "Load", "SSO")
-                    }
+
+                    @Html.ActionLink("Load", "Load", "SSO")
                     @*<li>@Html.ActionLink("Home", "Index", "Home")</li>
                         <li>@Html.ActionLink("About", "About", "Home")</li>
                         <li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@

@@ -6,13 +6,33 @@ using System.Text;
 using System.IO;
 using System.Linq;
 using EveAccountant.Common;
+using System.Threading.Tasks;
+using System.Diagnostics;
 
 namespace EveSSO.Market.History
 {
     public static class MarketHistoryProvider
     {
 
-        public static MarketHistory[] GetMarketHistory(long regionId, long itemId, bool cacheOnly)
+        public static List<RegionMarketHistory> GetMarketHistoryFromWeb(int itemLimit)
+        {
+            System.Net.ServicePointManager.DefaultConnectionLimit = 20;
+            var sw = new Stopwatch();
+            sw.Start();
+
+            var result = new List<RegionMarketHistory>();
+            foreach (var region in Regions)
+            {
+                result.Add(GetRegionMarketHistory(region, false, itemLimit));
+            }
+
+            sw.Stop();
+            Console.WriteLine($"Downloaded { (itemLimit * Regions.Count()) } items in { sw.ElapsedMilliseconds } ms");
+
+            return result;
+        }
+
+        private static async Task<MarketHistory[]> GetMarketHistoryAsync(long regionId, long itemId, bool cacheOnly)
         {
             //Try to get cached data
             string marketDataJson = string.Empty;
@@ -28,7 +48,7 @@ namespace EveSSO.Market.History
                 var lastEditSpan = DateTime.Now - fileInfo.LastWriteTime;
                 if (lastEditSpan.TotalDays >= 1 && !cacheOnly)
                 {
-                    marketDataJson = GetHistoryJsonFromWeb(regionId, itemId);
+                    marketDataJson = await GetHistoryJsonFromWebAsync(regionId, itemId);
                 }
                 else
                 {
@@ -39,34 +59,12 @@ namespace EveSSO.Market.History
             {
                 if (!cacheOnly)
                 {
-                    marketDataJson = GetHistoryJsonFromWeb(regionId, itemId);
+                    marketDataJson = await GetHistoryJsonFromWebAsync(regionId, itemId);
                 }
             }
 
             var marketData = JsonConvert.DeserializeObject<MarketHistory[]>(marketDataJson);
             return marketData;
-        }
-
-        public static List<RegionMarketHistory> GetMarketHistoryFromCache(int itemLimit)
-        {
-            var result = new List<RegionMarketHistory>();
-            foreach (var region in Regions)
-            {
-                result.Add(GetRegionMarketHistory(region, true, itemLimit));
-            }
-
-            return result;
-        }
-
-        public static List<RegionMarketHistory> GetMarketHistoryFromWeb(int itemLimit)
-        {
-            var result = new List<RegionMarketHistory>();
-            foreach (var region in Regions)
-            {
-                result.Add(GetRegionMarketHistory(region, false, itemLimit));
-            }
-
-            return result;
         }
 
         private static RegionMarketHistory GetRegionMarketHistory(long regionId, bool cacheOnly, int itemLimit)
@@ -81,26 +79,53 @@ namespace EveSSO.Market.History
                 items = items.Take(itemLimit).ToDictionary(pair => pair.Key, pair => pair.Value);
             }
 
+            List<Task<ItemMarketHistory>> marketHistoryTasks = new List<Task<ItemMarketHistory>>();
             foreach (var item in items)
             {
-                var itemHistory = GetItemMarketHistory(regionId, item.Key, cacheOnly);
-                if (itemHistory == null)
-                {
-                    continue;
-                }
-                result.ItemMarketHistories.Add(itemHistory);
+                marketHistoryTasks.Add(GetItemMarketHistoryAsync(regionId, item.Key, cacheOnly));
+            }
+
+            Task.WaitAll(marketHistoryTasks.ToArray());
+
+            foreach (var task in marketHistoryTasks)
+            {
+                result.ItemMarketHistories.Add(task.Result);
             }
 
             return result;
         }
 
-        private static ItemMarketHistory GetItemMarketHistory(long regionId, long itemId, bool cacheOnly)
+        private static async Task<ItemMarketHistory> GetItemMarketHistoryAsync(long regionId, long itemId, bool cacheOnly)
         {
             ItemMarketHistory itemMarketHistory = new ItemMarketHistory();
             itemMarketHistory.ItemId = itemId;
-            itemMarketHistory.MarketHistory = GetMarketHistory(regionId, itemId, cacheOnly);
+            itemMarketHistory.MarketHistory = await GetMarketHistoryAsync(regionId, itemId, cacheOnly);
             itemMarketHistory.RegionId = regionId;
             return itemMarketHistory;
+        }
+
+        private static async Task<string> GetHistoryJsonFromWebAsync(long regionId, long itemId)
+        {
+            try
+            {
+                using (var webClient = new WebClient())
+                {
+                    string fileFormat = $"cache/history/{regionId}_{itemId}.txt";
+                    var uri = new Uri($"https://esi.evetech.net/latest/markets/{ regionId }/history/?datasource=tranquility&type_id={ itemId }");
+                    string marketDataJson = await webClient.DownloadStringTaskAsync(uri);
+
+                    Console.WriteLine($"Downloaded web history for {regionId} - {itemId}");
+
+                    File.WriteAllText(fileFormat, marketDataJson);
+
+                    return marketDataJson;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Exception from web: { ex.Message }");
+                return string.Empty;
+            }
         }
 
         private static string GetHistoryJsonFromWeb(long regionId, long itemId)
@@ -109,11 +134,13 @@ namespace EveSSO.Market.History
             {
                 Console.WriteLine($"Downloading web history for {regionId} - {itemId}");
                 string fileFormat = $"cache/history/{regionId}_{itemId}.txt";
-                var webClient = new WebClient();
-                string marketDataJson = webClient.DownloadString($"https://esi.evetech.net/latest/markets/{ regionId }/history/?datasource=tranquility&type_id={ itemId }");
-                File.WriteAllText(fileFormat, marketDataJson);
+                using (var webClient = new WebClient())
+                {
+                    string marketDataJson = webClient.DownloadString($"https://esi.evetech.net/latest/markets/{ regionId }/history/?datasource=tranquility&type_id={ itemId }");
+                    File.WriteAllText(fileFormat, marketDataJson);
 
-                return marketDataJson;
+                    return marketDataJson;
+                }
             }
             catch (Exception ex)
             {
@@ -123,5 +150,6 @@ namespace EveSSO.Market.History
         }
 
         private static long[] Regions = { 10000002, /*10000043, 10000030,*/ 10000042 };
+
     }
 }

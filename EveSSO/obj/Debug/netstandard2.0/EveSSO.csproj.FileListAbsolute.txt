@@ -11,15 +11,12 @@ C:\Users\Steve\source\repos\EveMarketDiscovery\EveSSO\bin\Debug\netstandard2.0\i
 C:\Users\Steve\source\repos\EveMarketDiscovery\EveSSO\bin\Debug\netstandard2.0\Common.dll
 C:\Users\Steve\source\repos\EveMarketDiscovery\EveSSO\bin\Debug\netstandard2.0\Common.pdb
 C:\Users\Steve\source\repos\EveMarketDiscovery\EveSSO\obj\Debug\netstandard2.0\EveSSO.csproj.CopyComplete
-E:\Github\EveMarketDiscovery\EveSSO\bin\Debug\netstandard2.0\items.txt
 E:\Github\EveMarketDiscovery\EveSSO\bin\Debug\netstandard2.0\EveSSO.deps.json
 E:\Github\EveMarketDiscovery\EveSSO\bin\Debug\netstandard2.0\EveSSO.dll
 E:\Github\EveMarketDiscovery\EveSSO\bin\Debug\netstandard2.0\EveSSO.pdb
-E:\Github\EveMarketDiscovery\EveSSO\bin\Debug\netstandard2.0\Common.dll
 E:\Github\EveMarketDiscovery\EveSSO\bin\Debug\netstandard2.0\System.ComponentModel.DataAnnotations.dll
 E:\Github\EveMarketDiscovery\EveSSO\bin\Debug\netstandard2.0\System.Configuration.dll
 E:\Github\EveMarketDiscovery\EveSSO\bin\Debug\netstandard2.0\System.Security.dll
-E:\Github\EveMarketDiscovery\EveSSO\bin\Debug\netstandard2.0\Common.pdb
 E:\Github\EveMarketDiscovery\EveSSO\bin\Debug\netstandard2.0\System.ComponentModel.DataAnnotations.xml
 E:\Github\EveMarketDiscovery\EveSSO\bin\Debug\netstandard2.0\System.Configuration.xml
 E:\Github\EveMarketDiscovery\EveSSO\bin\Debug\netstandard2.0\System.Security.xml
@@ -48,3 +45,5 @@ D:\Github\EveMarketDiscovery\EveSSO\obj\Debug\netstandard2.0\EveSSO.AssemblyInfo
 D:\Github\EveMarketDiscovery\EveSSO\obj\Debug\netstandard2.0\EveSSO.csproj.CopyComplete
 D:\Github\EveMarketDiscovery\EveSSO\obj\Debug\netstandard2.0\EveSSO.dll
 D:\Github\EveMarketDiscovery\EveSSO\obj\Debug\netstandard2.0\EveSSO.pdb
+E:\Github\EveMarketDiscovery\EveSSO\bin\Debug\netstandard2.0\EveAccountant.Common.dll
+E:\Github\EveMarketDiscovery\EveSSO\bin\Debug\netstandard2.0\EveAccountant.Common.pdb

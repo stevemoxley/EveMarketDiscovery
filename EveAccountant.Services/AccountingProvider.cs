@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using EveAccountant.Common;
+using EveSSO.Wallet.Transactions;
 
 namespace EveAccountant.Services
 {
@@ -16,11 +17,27 @@ namespace EveAccountant.Services
             var transactionDao = new TransactionDAO();
             var transactions = transactionDao.GetTransactions();
 
+            foreach (var transaction in transactions)
+            {
+                string name = "";
+                if (ItemProvider.TryGetItem(transaction.type_id, out name))
+                {
+                    transaction.type = name;
+                }
+            }
+
+            result.Transactions = transactions;
+
             var itemGroups = transactions.GroupBy(t => t.type_id);
 
             foreach (var itemGroup in itemGroups)
             {
-                var item = ItemProvider.Items()[itemGroup.FirstOrDefault().type_id];
+
+                string item = string.Empty;
+                if (!ItemProvider.TryGetItem(itemGroup.FirstOrDefault().type_id, out item))
+                {
+                    continue;
+                }
                 var buyOrders = itemGroup.Where(i => i.is_buy).ToList();
                 var sellOrders = itemGroup.Where(i => !i.is_buy).ToList();
 
@@ -65,17 +82,17 @@ namespace EveAccountant.Services
                     }
                 }
 
-                var transaction = new Transaction
+                var transaction = new ItemGroup
                 {
                     Item = item,
                     QuantityBought = quantityBought,
                     QuantitySold = quantitySold,
                     Revenue = revenue,
                     Cost = cost,
-                    UnsoldValue = unsold
+                    UnsoldValue = unsold,
                 };
 
-                result.Transactions.Add(transaction);
+                result.ItemGroups.Add(transaction);
             }
 
             return result;
@@ -90,7 +107,7 @@ namespace EveAccountant.Services
         {
             get
             {
-                return Transactions.Sum(t => t.Revenue);
+                return ItemGroups.Sum(t => t.Revenue);
             }
         }
 
@@ -98,7 +115,7 @@ namespace EveAccountant.Services
         {
             get
             {
-                return Transactions.Sum(t => t.Cost);
+                return ItemGroups.Sum(t => t.Cost);
             }
         }
 
@@ -106,7 +123,7 @@ namespace EveAccountant.Services
         {
             get
             {
-                return Transactions.Sum(t => t.Profit);
+                return ItemGroups.Sum(t => t.Profit);
             }
         }
 
@@ -122,15 +139,17 @@ namespace EveAccountant.Services
         {
             get
             {
-                return Transactions.Sum(t => t.UnsoldValue);
+                return ItemGroups.Sum(t => t.UnsoldValue);
             }
         }
+
+        public List<ItemGroup> ItemGroups { get; set; } = new List<ItemGroup>();
 
         public List<Transaction> Transactions { get; set; } = new List<Transaction>();
     }
 
 
-    public class Transaction
+    public class ItemGroup
     {
         public string Item { get; set; }
 

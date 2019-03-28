@@ -6,23 +6,24 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace EveSSO.Market.Order
 {
     public static class MarketOrderProvider
     {
-        public static List<RegionMarketOrders> GetMarketOrders(int itemLimit, bool cacheOnly = false)
+        public static async Task<List<RegionMarketOrders>> GetMarketOrders(int itemLimit, bool cacheOnly = false)
         {
             List<RegionMarketOrders> result = new List<RegionMarketOrders>();
             foreach (var region in Regions)
             {
-                result.Add(GetRegionMarketOrders(region, itemLimit, cacheOnly));
+                result.Add(await GetRegionMarketOrders(region, itemLimit, cacheOnly));
             }
 
             return result;
         }
 
-        public static RegionMarketOrders GetRegionMarketOrders(long regionId, int itemLimit = -1, bool cacheOnly = false)
+        public static async Task<RegionMarketOrders> GetRegionMarketOrders(long regionId, int itemLimit = -1, bool cacheOnly = false)
         {
             RegionMarketOrders result = new RegionMarketOrders();
             result.RegionId = regionId;
@@ -36,13 +37,13 @@ namespace EveSSO.Market.Order
 
             foreach (var item in items)
             {
-                result.ItemMarketOrders.Add(GetItemMarketOrders(regionId, item.Key, cacheOnly));
+                result.ItemMarketOrders.Add(await GetItemMarketOrders(regionId, item.Key, cacheOnly));
             }
 
             return result;
         }
 
-        public static ItemMarketOrders GetItemMarketOrders(long regionId, long itemId, bool cacheOnly = false)
+        public static  async Task<ItemMarketOrders> GetItemMarketOrders(long regionId, long itemId, bool cacheOnly = false)
         {
             ItemMarketOrders result = new ItemMarketOrders();
             result.RegionId = regionId;
@@ -58,7 +59,7 @@ namespace EveSSO.Market.Order
                 var fileAge = DateTime.Now - fileInfo.LastWriteTime;
                 if(fileAge.TotalHours >= 24 && !cacheOnly)
                 {
-                    ordersJson = GetMarketOrderJsonFromWeb(regionId, itemId);
+                    ordersJson = await GetMarketOrderJsonFromWebAsync(regionId, itemId);
                 }
                 else
                 {
@@ -68,7 +69,7 @@ namespace EveSSO.Market.Order
             else
             {
                 if(!cacheOnly)
-                    ordersJson = GetMarketOrderJsonFromWeb(regionId, itemId);
+                    ordersJson = await GetMarketOrderJsonFromWebAsync(regionId, itemId);
             }
 
             result.MarketOrders = JsonConvert.DeserializeObject<MarketOrder[]>(ordersJson);
@@ -77,7 +78,7 @@ namespace EveSSO.Market.Order
             return result;
         }
 
-        private static string GetMarketOrderJsonFromWeb(long regionId, long itemId)
+        private static async Task<string> GetMarketOrderJsonFromWebAsync(long regionId, long itemId)
         {
             try
             {
@@ -88,11 +89,14 @@ namespace EveSSO.Market.Order
 
                 Console.WriteLine($"Downloading web orders for {regionId} - {itemId}");
                 string fileFormat = $"{_ordersCacheDirectory}/{regionId}_{itemId}.txt";
-                var webClient = new WebClient();
-                string marketDataJson = webClient.DownloadString($"https://esi.evetech.net/latest/markets/{ regionId }/orders/?datasource=tranquility&type_id={ itemId }");
-                File.WriteAllText(fileFormat, marketDataJson);
+                using (var webClient = new WebClient())
+                {
+                    var uri = new Uri($"https://esi.evetech.net/latest/markets/{ regionId }/orders/?datasource=tranquility&type_id={ itemId }");
+                    string marketDataJson = await webClient.DownloadStringTaskAsync(uri);
+                    File.WriteAllText(fileFormat, marketDataJson);
 
-                return marketDataJson;
+                    return marketDataJson;
+                }
             }
             catch (Exception ex)
             {

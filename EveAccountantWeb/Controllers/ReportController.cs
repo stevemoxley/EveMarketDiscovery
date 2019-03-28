@@ -7,7 +7,7 @@ using System.Web.Mvc;
 
 namespace EveAccountantWeb.Controllers
 {
-    [Authorize]
+    //[Authorize]
     public class ReportController : Controller
     {
         // GET: Report

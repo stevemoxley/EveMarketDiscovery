@@ -106,7 +106,6 @@ C:\Users\Steve\source\repos\EveMarketDiscovery\EveMarketDiscovery.DataAnalysis\b
 C:\Users\Steve\source\repos\EveMarketDiscovery\EveMarketDiscovery.DataAnalysis\bin\Debug\Common.pdb
 C:\Users\Steve\source\repos\EveMarketDiscovery\EveMarketDiscovery.DataAnalysis\bin\Debug\EveSSO.pdb
 C:\Users\Steve\source\repos\EveMarketDiscovery\EveMarketDiscovery.DataAnalysis\obj\Debug\EveMarketDiscovery.DataAnalysis.csproj.CopyComplete
-E:\Github\EveMarketDiscovery\EveMarketDiscovery.DataAnalysis\bin\Debug\items.txt
 E:\Github\EveMarketDiscovery\EveMarketDiscovery.DataAnalysis\bin\Debug\EveMarketDiscovery.DataAnalysis.dll
 E:\Github\EveMarketDiscovery\EveMarketDiscovery.DataAnalysis\bin\Debug\EveMarketDiscovery.DataAnalysis.pdb
 E:\Github\EveMarketDiscovery\EveMarketDiscovery.DataAnalysis\bin\Debug\Microsoft.Win32.Primitives.dll
@@ -205,9 +204,7 @@ E:\Github\EveMarketDiscovery\EveMarketDiscovery.DataAnalysis\bin\Debug\System.Xm
 E:\Github\EveMarketDiscovery\EveMarketDiscovery.DataAnalysis\bin\Debug\System.Xml.XmlSerializer.dll
 E:\Github\EveMarketDiscovery\EveMarketDiscovery.DataAnalysis\bin\Debug\System.Xml.XPath.dll
 E:\Github\EveMarketDiscovery\EveMarketDiscovery.DataAnalysis\bin\Debug\System.Xml.XPath.XDocument.dll
-E:\Github\EveMarketDiscovery\EveMarketDiscovery.DataAnalysis\bin\Debug\Common.dll
 E:\Github\EveMarketDiscovery\EveMarketDiscovery.DataAnalysis\bin\Debug\EveSSO.dll
-E:\Github\EveMarketDiscovery\EveMarketDiscovery.DataAnalysis\bin\Debug\Common.pdb
 E:\Github\EveMarketDiscovery\EveMarketDiscovery.DataAnalysis\bin\Debug\EveSSO.pdb
 E:\Github\EveMarketDiscovery\EveMarketDiscovery.DataAnalysis\obj\Debug\EveMarketDiscovery.DataAnalysis.csprojAssemblyReference.cache
 E:\Github\EveMarketDiscovery\EveMarketDiscovery.DataAnalysis\obj\Debug\EveMarketDiscovery.DataAnalysis.csproj.CoreCompileInputs.cache
@@ -321,3 +318,5 @@ D:\Github\EveMarketDiscovery\EveMarketDiscovery.DataAnalysis\obj\Debug\EveMarket
 D:\Github\EveMarketDiscovery\EveMarketDiscovery.DataAnalysis\obj\Debug\EveMarketDiscovery.DataAnalysis.csproj.CopyComplete
 D:\Github\EveMarketDiscovery\EveMarketDiscovery.DataAnalysis\obj\Debug\EveMarketDiscovery.DataAnalysis.dll
 D:\Github\EveMarketDiscovery\EveMarketDiscovery.DataAnalysis\obj\Debug\EveMarketDiscovery.DataAnalysis.pdb
+E:\Github\EveMarketDiscovery\EveMarketDiscovery.DataAnalysis\bin\Debug\EveAccountant.Common.dll
+E:\Github\EveMarketDiscovery\EveMarketDiscovery.DataAnalysis\bin\Debug\EveAccountant.Common.pdb

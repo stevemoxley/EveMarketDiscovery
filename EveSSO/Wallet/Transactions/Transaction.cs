@@ -19,6 +19,7 @@ namespace EveSSO.Wallet.Transactions
         public long quantity { get; set; }
         public long transaction_id { get; set; }
         public long type_id { get; set; }
+        public string type { get; set; }
         public float unit_price { get; set; }
     }
 

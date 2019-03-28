@@ -38,5 +38,20 @@ namespace EveAccountant.Common
             return result;
             }
 
+        public static bool TryGetItem(long key, out string result)
+        {
+            result = "";
+            try
+            {
+                result = Items()[key];
+            }
+            catch(Exception)
+            {
+                return false;
+            }
+
+            return true;
+        }
+
         }
     }

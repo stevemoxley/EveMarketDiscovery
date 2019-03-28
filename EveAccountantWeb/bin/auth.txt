@@ -1,1 +1,1 @@
-﻿
+{"access_token":"gcjHhVnZd4pA5uqPO7XtzjTY0zXBJegtdBz9jzco04iRw2kIqIiCVChIKA1OePYRvEJFOrZpzzsxZ5neVJbkPA","token_type":"Bearer","expires_in":1200,"refresh_token":"LkmZoV3qHKEfEhERj0xh_sqQCA3PUXl2Va_VumvJC92wXKtYYjGsQ_3QQUSbFi-R","expiration_time":"2019-03-28T09:02:46.6203974-05:00"}
