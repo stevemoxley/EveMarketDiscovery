@@ -28,7 +28,7 @@ namespace EveMarketDiscovery
 
             Console.WriteLine("Getting cached data. This can take awhile...");
 
-            int itemLimit = 2000;
+            int itemLimit = -1;
             var eveMarketData = new EveMarketData(itemLimit);
             Console.WriteLine("Cache loaded..");
             Console.WriteLine("Press [H] For History Analysis. Press [O] For Order Analysis");

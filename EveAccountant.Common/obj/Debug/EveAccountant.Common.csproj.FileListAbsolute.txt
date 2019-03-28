@@ -1,11 +1,9 @@
-D:\Github\EveMarketDiscovery\EveAccountant.Common\bin\Debug\EveAccountant.Common.dll
-D:\Github\EveMarketDiscovery\EveAccountant.Common\bin\Debug\EveAccountant.Common.pdb
-D:\Github\EveMarketDiscovery\EveAccountant.Common\obj\Debug\EveAccountant.Common.csproj.CoreCompileInputs.cache
-D:\Github\EveMarketDiscovery\EveAccountant.Common\obj\Debug\EveAccountant.Common.dll
-D:\Github\EveMarketDiscovery\EveAccountant.Common\obj\Debug\EveAccountant.Common.pdb
-D:\Github\EveMarketDiscovery\EveAccountant.Common\obj\Debug\EveAccountant.Common.csprojAssemblyReference.cache
+E:\Github\EveMarketDiscovery\EveAccountant.Common\obj\Debug\EveAccountant.Common.csproj.CoreCompileInputs.cache
+E:\Github\EveMarketDiscovery\EveAccountant.Common\bin\Debug\typeIDs.yaml
 E:\Github\EveMarketDiscovery\EveAccountant.Common\bin\Debug\EveAccountant.Common.dll
 E:\Github\EveMarketDiscovery\EveAccountant.Common\bin\Debug\EveAccountant.Common.pdb
-E:\Github\EveMarketDiscovery\EveAccountant.Common\obj\Debug\EveAccountant.Common.csproj.CoreCompileInputs.cache
 E:\Github\EveMarketDiscovery\EveAccountant.Common\obj\Debug\EveAccountant.Common.dll
 E:\Github\EveMarketDiscovery\EveAccountant.Common\obj\Debug\EveAccountant.Common.pdb
+E:\Github\EveMarketDiscovery\EveAccountant.Common\bin\Debug\YamlDotNet.dll
+E:\Github\EveMarketDiscovery\EveAccountant.Common\obj\Debug\EveAccountant.Common.csprojAssemblyReference.cache
+E:\Github\EveMarketDiscovery\EveAccountant.Common\obj\Debug\EveAccountant.Common.csproj.CopyComplete

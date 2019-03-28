@@ -165,10 +165,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\EveAccountant.Common\EveAccountant.Common.csproj">
-      <Project>{8e965d2f-bffc-4111-a368-01bc069cb240}</Project>
-      <Name>EveAccountant.Common</Name>
-    </ProjectReference>
     <ProjectReference Include="..\EveSSO\EveSSO.csproj">
       <Project>{73bb4d1a-0388-4b8b-94ff-40f53fb64aa2}</Project>
       <Name>EveSSO</Name>

@@ -52,7 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EveAccountant.Common\EveAccountant.Common.csproj">
-      <Project>{8e965d2f-bffc-4111-a368-01bc069cb240}</Project>
+      <Project>{8f168c1e-a0d0-415e-970d-1ac668a747cd}</Project>
       <Name>EveAccountant.Common</Name>
     </ProjectReference>
     <ProjectReference Include="..\EveSSO\EveSSO.csproj">

@@ -4,6 +4,8 @@ using System.IO;
 using System.Reflection;
 using System.Text;
 using System.Web;
+using YamlDotNet.Serialization;
+using System.Linq;
 
 namespace EveAccountant.Common
 {
@@ -12,31 +14,35 @@ namespace EveAccountant.Common
 
         public static Dictionary<long, string> Items()
         {
-            Dictionary<long, string> result = new Dictionary<long, string>();
+            if (_items.Count > 0)
+                return _items;
 
-            string[] text = null;
+            string text = null;
 
             try
             {
-                text = File.ReadAllLines(System.Web.HttpContext.Current.Server.MapPath(@"items.txt"));
+                text = File.ReadAllText(System.Web.HttpContext.Current.Server.MapPath(@"typeIDs.yaml"));
             }
             catch (NullReferenceException ex)
             {
-                text = File.ReadAllLines("items.txt");
+                text = File.ReadAllText("typeIDs.yaml");
             }
 
-            for (int i = 0; i < text.Length; i++)
+
+            var deserializer = new DeserializerBuilder().IgnoreUnmatchedProperties().Build();
+
+            var items = deserializer.Deserialize<Dictionary<long, Item>>(text);
+
+            foreach (var item in items)
             {
-                var line = text[i];
-                var parts = line.Split('|');
-                var id = long.Parse(parts[0]);
-                var name = parts[1].ToString();
-                result.Add(id, name);
+                if (item.Value.marketGroupID > 0)
+                {
+                    _items.Add(item.Key, item.Value.ToString());
+                }
             }
 
-
-            return result;
-            }
+            return _items;
+        }
 
         public static bool TryGetItem(long key, out string result)
         {
@@ -45,7 +51,7 @@ namespace EveAccountant.Common
             {
                 result = Items()[key];
             }
-            catch(Exception)
+            catch (Exception)
             {
                 return false;
             }
@@ -53,5 +59,7 @@ namespace EveAccountant.Common
             return true;
         }
 
-        }
+
+        private static Dictionary<long, string> _items = new Dictionary<long, string>();
     }
+}

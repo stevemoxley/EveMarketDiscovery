@@ -16,7 +16,7 @@ namespace EveSSO.Market.History
 
         public static List<RegionMarketHistory> GetMarketHistoryFromWeb(int itemLimit)
         {
-            System.Net.ServicePointManager.DefaultConnectionLimit = 20;
+            System.Net.ServicePointManager.DefaultConnectionLimit = 160;
             var sw = new Stopwatch();
             sw.Start();
 
@@ -27,7 +27,7 @@ namespace EveSSO.Market.History
             }
 
             sw.Stop();
-            Console.WriteLine($"Downloaded { (itemLimit * Regions.Count()) } items in { sw.ElapsedMilliseconds } ms");
+            Console.WriteLine($"Downloaded { result.Sum(f=>f.ItemMarketHistories.Count) } items in { (sw.ElapsedMilliseconds / 1000) } s");
 
             return result;
         }
@@ -52,6 +52,7 @@ namespace EveSSO.Market.History
                 }
                 else
                 {
+                    Console.WriteLine($"Pulled cached history for {regionId} - {itemId}");
                     marketDataJson = File.ReadAllText(fileFormat);
                 }
             }
@@ -123,7 +124,7 @@ namespace EveSSO.Market.History
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Exception from web: { ex.Message }");
+                Console.WriteLine($"Exception from web: { ex.Message } on item: { itemId }");
                 return string.Empty;
             }
         }

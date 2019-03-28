@@ -15,7 +15,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EveAccountantWeb", "EveAcco
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EveAccountant.Services", "EveAccountant.Services\EveAccountant.Services.csproj", "{16D60962-8BDE-4254-A63F-F57ACDD1FA2B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EveAccountant.Common", "EveAccountant.Common\EveAccountant.Common.csproj", "{8E965D2F-BFFC-4111-A368-01BC069CB240}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EveAccountant.Common", "EveAccountant.Common\EveAccountant.Common.csproj", "{8F168C1E-A0D0-415E-970D-1AC668A747CD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,10 +47,10 @@ Global
 		{16D60962-8BDE-4254-A63F-F57ACDD1FA2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{16D60962-8BDE-4254-A63F-F57ACDD1FA2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{16D60962-8BDE-4254-A63F-F57ACDD1FA2B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8E965D2F-BFFC-4111-A368-01BC069CB240}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8E965D2F-BFFC-4111-A368-01BC069CB240}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8E965D2F-BFFC-4111-A368-01BC069CB240}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8E965D2F-BFFC-4111-A368-01BC069CB240}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F168C1E-A0D0-415E-970D-1AC668A747CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F168C1E-A0D0-415E-970D-1AC668A747CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F168C1E-A0D0-415E-970D-1AC668A747CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F168C1E-A0D0-415E-970D-1AC668A747CD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

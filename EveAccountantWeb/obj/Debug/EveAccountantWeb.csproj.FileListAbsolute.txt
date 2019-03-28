@@ -141,6 +141,7 @@ D:\Github\EveMarketDiscovery\EveAccountantWeb\bin\Newtonsoft.Json.pdb
 D:\Github\EveMarketDiscovery\EveAccountantWeb\bin\char.txt
 D:\Github\EveMarketDiscovery\EveAccountantWeb\bin\auth.txt
 D:\Github\EveMarketDiscovery\EveAccountantWeb\bin\items.txt
+E:\Github\EveMarketDiscovery\EveAccountantWeb\obj\Debug\EveAccountantWeb.csproj.CoreCompileInputs.cache
 E:\Github\EveMarketDiscovery\EveAccountantWeb\bin\ApplicationInsights.config
 E:\Github\EveMarketDiscovery\EveAccountantWeb\bin\auth.txt
 E:\Github\EveMarketDiscovery\EveAccountantWeb\bin\char.txt
@@ -172,6 +173,7 @@ E:\Github\EveMarketDiscovery\EveAccountantWeb\bin\roslyn\System.Diagnostics.File
 E:\Github\EveMarketDiscovery\EveAccountantWeb\bin\roslyn\System.Diagnostics.Process.dll
 E:\Github\EveMarketDiscovery\EveAccountantWeb\bin\roslyn\System.Diagnostics.StackTrace.dll
 E:\Github\EveMarketDiscovery\EveAccountantWeb\bin\roslyn\System.IO.Compression.dll
+E:\Github\EveMarketDiscovery\EveAccountantWeb\bin\roslyn\System.IO.FileSystem.dll
 E:\Github\EveMarketDiscovery\EveAccountantWeb\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
 E:\Github\EveMarketDiscovery\EveAccountantWeb\bin\roslyn\System.IO.FileSystem.Primitives.dll
 E:\Github\EveMarketDiscovery\EveAccountantWeb\bin\roslyn\System.IO.Pipes.dll
@@ -180,10 +182,12 @@ E:\Github\EveMarketDiscovery\EveAccountantWeb\bin\roslyn\System.Security.AccessC
 E:\Github\EveMarketDiscovery\EveAccountantWeb\bin\roslyn\System.Security.Claims.dll
 E:\Github\EveMarketDiscovery\EveAccountantWeb\bin\roslyn\System.Security.Cryptography.Algorithms.dll
 E:\Github\EveMarketDiscovery\EveAccountantWeb\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\Github\EveMarketDiscovery\EveAccountantWeb\bin\roslyn\System.Security.Cryptography.Primitives.dll
 E:\Github\EveMarketDiscovery\EveAccountantWeb\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
 E:\Github\EveMarketDiscovery\EveAccountantWeb\bin\roslyn\System.Security.Principal.Windows.dll
 E:\Github\EveMarketDiscovery\EveAccountantWeb\bin\roslyn\System.Text.Encoding.CodePages.dll
 E:\Github\EveMarketDiscovery\EveAccountantWeb\bin\roslyn\System.Threading.Thread.dll
+E:\Github\EveMarketDiscovery\EveAccountantWeb\bin\roslyn\System.ValueTuple.dll
 E:\Github\EveMarketDiscovery\EveAccountantWeb\bin\roslyn\System.Xml.ReaderWriter.dll
 E:\Github\EveMarketDiscovery\EveAccountantWeb\bin\roslyn\System.Xml.XmlDocument.dll
 E:\Github\EveMarketDiscovery\EveAccountantWeb\bin\roslyn\System.Xml.XPath.dll
@@ -277,13 +281,11 @@ E:\Github\EveMarketDiscovery\EveAccountantWeb\bin\DataAccess.dll.config
 E:\Github\EveMarketDiscovery\EveAccountantWeb\bin\EveSSO.pdb
 E:\Github\EveMarketDiscovery\EveAccountantWeb\bin\EveAccountant.Common.pdb
 E:\Github\EveMarketDiscovery\EveAccountantWeb\obj\Debug\EveAccountantWeb.csprojAssemblyReference.cache
-E:\Github\EveMarketDiscovery\EveAccountantWeb\obj\Debug\EveAccountantWeb.csproj.CoreCompileInputs.cache
 E:\Github\EveMarketDiscovery\EveAccountantWeb\obj\Debug\EveAccountantWeb.csproj.CopyComplete
 E:\Github\EveMarketDiscovery\EveAccountantWeb\obj\Debug\EveAccountantWeb.dll
 E:\Github\EveMarketDiscovery\EveAccountantWeb\obj\Debug\EveAccountantWeb.pdb
-E:\Github\EveMarketDiscovery\EveAccountantWeb\bin\roslyn\System.IO.FileSystem.dll
-E:\Github\EveMarketDiscovery\EveAccountantWeb\bin\roslyn\System.Security.Cryptography.Primitives.dll
-E:\Github\EveMarketDiscovery\EveAccountantWeb\bin\roslyn\System.ValueTuple.dll
 E:\Github\EveMarketDiscovery\EveAccountantWeb\bin\x86\e_sqlite3.dll
 E:\Github\EveMarketDiscovery\EveAccountantWeb\bin\x64\e_sqlite3.dll
 E:\Github\EveMarketDiscovery\EveAccountantWeb\bin\EMD.sqlite
+E:\Github\EveMarketDiscovery\EveAccountantWeb\bin\typeIDs.yaml
+E:\Github\EveMarketDiscovery\EveAccountantWeb\bin\YamlDotNet.dll
