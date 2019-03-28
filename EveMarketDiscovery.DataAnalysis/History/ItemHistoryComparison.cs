@@ -37,27 +37,11 @@ namespace EveMarketDiscovery.DataAnalysis.History
             }
         }
 
-        public float AverageVolumeProfitMarginPotential
-        {
-            get
-            {
-                var averageVolume = (BaseVolume + Volume) / 2;
-                return averageVolume * ProfitMargin;
-            }
-        }
-
         public float PotentialDailyProfit
         {
             get
             {
-                if(BaseVolume > Volume)
-                {
-                    return BaseVolume * PriceDifference;
-                }
-                else
-                {
-                    return Volume * PriceDifference;
-                }
+                return Volume * PriceDifference;
             }
         }
 

@@ -1288,7 +1288,7 @@ Gistum A-Type Adaptive Invulnerability Field,Metropolis,Jita,7.8E+08,7.831253E+0
 Pithum A-Type Adaptive Invulnerability Field,Metropolis,Jita,1.45E+09,1.337914E+09,1.120863E+08,7.730088,1,74,1.120863E+08
 Pithum B-Type Adaptive Invulnerability Field,Metropolis,Jita,8.849999E+08,7.703583E+08,1.146416E+08,12.95385,1,25,1.146416E+08
 Pithum C-Type Adaptive Invulnerability Field,Metropolis,Jita,4.71E+08,3.52E+08,1.19E+08,25.26539,1,264,1.19E+08
-Exotic Dancers, Male,Metropolis,Jita,30444.44,90420.69,59976.25,66.33023,20,883,1199525
+Exotic Dancers  Male,Metropolis,Jita,30444.44,90420.69,59976.25,66.33023,20,883,1199525
 Miasmos Quafe Ultra Edition,Metropolis,Jita,7.2E+07,5E+08,4.28E+08,85.6,1,1,4.28E+08
 Women's 'Quafe' T-shirt YC 114,Metropolis,Jita,2E+08,1.2E+08,8E+07,40,2,1,1.6E+08
 Men's 'Sterling' Dress Shirt (white),Metropolis,Jita,1,1.96E+08,1.96E+08,100,3,1,5.88E+08
@@ -3218,7 +3218,7 @@ Tempest Fleet Issue,Metropolis,Jita,2.774E+08,2.608063E+08,1.659366E+07,5.981854
 Nightmare,Metropolis,Jita,4.935E+08,4.34562E+08,5.893795E+07,11.94285,1,14,5.893795E+07
 Machariel,Metropolis,Jita,3.75001E+08,3.711941E+08,3806848,1.015157,1,50,3806848
 Vindicator,Metropolis,Jita,3.97155E+08,3.909672E+08,6187840,1.558042,1,22,6187840
-Exotic Dancers, Female,Metropolis,Jita,29444.44,36500.01,7055.572,19.33033,10,643,70555.72
+Exotic Dancers  Female,Metropolis,Jita,29444.44,36500.01,7055.572,19.33033,10,643,70555.72
 Fluxed Condensates,Metropolis,Jita,512,53000.14,52488.14,99.03397,400,4276,2.099526E+07
 Large AutoCannon Battery,Metropolis,Jita,9950000,2025807,7924193,79.64013,20,4,1.584839E+08
 Medium AutoCannon Battery,Metropolis,Jita,8600000,2249999,6350001,73.83722,1,5,6350001
@@ -6415,8 +6415,8 @@ A Big Red Button,Metropolis,Jita,1000,1875030,1874030,99.94667,1,2,1874030
 A Tank of Honor,Metropolis,Jita,2000000,2403749,403749,16.79664,2,4,807498
 Military Experts and You,Metropolis,Jita,1,225000,224999,99.99956,1,1,224999
 Rules of Engagement,Metropolis,Jita,0.01,1999999,1999999,100,1,1,1999999
-Little Helper, Female,Metropolis,Jita,88.39,1.00025E+07,1.000241E+07,99.99912,1,2,1.000241E+07
-Little Helper, Male,Metropolis,Jita,1200000,3580000,2380000,66.48045,1,1,2380000
+Little Helper  Female,Metropolis,Jita,88.39,1.00025E+07,1.000241E+07,99.99912,1,2,1.000241E+07
+Little Helper  Male,Metropolis,Jita,1200000,3580000,2380000,66.48045,1,1,2380000
 Replica Gallente Cruiser,Metropolis,Jita,1,300000,299999,99.99966,1,10,299999
 NEO YC 114: Baaaramu,Metropolis,Jita,1,100000,99999.01,99.999,1,1,99999.01
 NEO YC 114: Asine Hitama‘s team,Metropolis,Jita,45001,100000,54999.02,54.99901,1,1,54999.02
@@ -6549,7 +6549,7 @@ Snowball,Metropolis,Jita,740,71.04,668.96,90.4,197,3258,131785.1
 Sodium Firework,Metropolis,Jita,130,160.04,30.03999,18.7703,100,3991,3003.999
 Barium Firework,Metropolis,Jita,201.02,76.24,124.78,62.07343,100,4550,12478
 Copper Firework,Metropolis,Jita,600,204.44,395.56,65.92667,100,2997,39556
-Hull Tanking, Elite,Metropolis,Jita,1,974336,974335,99.9999,1,3,974335
+Hull Tanking  Elite,Metropolis,Jita,1,974336,974335,99.9999,1,3,974335
 Covert Research Tools,Metropolis,Jita,474000,475002.3,1002.25,0.210999,1067,13029,1069401
 Small Mobile 'Hybrid' Siphon Unit,Metropolis,Jita,12000,3.35E+07,3.3488E+07,99.96418,1,2,3.3488E+07
 Small Mobile 'Rote' Siphon Unit,Metropolis,Jita,13000,1.4E+07,1.3987E+07,99.90714,1,3,1.3987E+07
@@ -6767,7 +6767,7 @@ Sort Dragon’s Guide To Diplomacy,Metropolis,Jita,1,10000.01,9999.01,99.99,1,8,
 Polaris Eviction Notice,Metropolis,Jita,1,95000,94999,99.99895,1,4,94999
 Jump Portal Generation Instruction Holoreel,Metropolis,Jita,1,2000.01,1999.01,99.95,1,4,1999.01
 Vincent Pryce’s Warp Disruption Field Generator,Metropolis,Jita,99999,40000.01,59998.99,59.99959,1,4,59998.99
-My God, It’s Full Of Holes!,Metropolis,Jita,1,475000,474999,99.99979,1,8,474999
+My God  It’s Full Of Holes!,Metropolis,Jita,1,475000,474999,99.99979,1,8,474999
 Guillome Renard’s Sleeper Loot Stash,Metropolis,Jita,5000,20.02,4979.98,99.5996,1,4,4979.98
 Sisters Of EVE Charity Statue,Metropolis,Jita,1,2300,2299,99.95652,1,4,2299
 The Damsel’s Drunk Bodyguard,Metropolis,Jita,1,1000,999,99.9,1,4,999

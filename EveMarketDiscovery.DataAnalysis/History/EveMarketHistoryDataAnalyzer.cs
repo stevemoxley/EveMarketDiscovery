@@ -58,7 +58,7 @@ namespace EveMarketDiscovery.DataAnalysis.History
 
                         itemComparison.AveragePrice = history.average;
                         itemComparison.BaseAveragePrice = baseHistory.average;
-                        itemComparison.ItemName = ItemProvider.Items()[itemComparison.ItemId];
+                        itemComparison.ItemName = ItemProvider.Items()[itemComparison.ItemId].Replace(',',' ');
                         itemComparison.Volume = history.volume;
                         itemComparison.BaseVolume = baseHistory.volume;
 
@@ -83,7 +83,7 @@ namespace EveMarketDiscovery.DataAnalysis.History
         public void SaveEveMarketDataAnalysisAsCSV(EveMarketHistoryDataAnalysis eveMarketDataAnalysis, string fileName)
         {
             StringBuilder csvBuild = new StringBuilder();
-            csvBuild.AppendLine($"ItemName,Region,BaseRegion,AveragePrice,BaseAveragePrice,Difference,ProfitMargin,Volume,BaseVolume,AverageVolumeProfitMarginPotential,PotentialDailyProfit"); //header
+            csvBuild.AppendLine($"ItemName,Region,BaseRegion,AveragePrice,BaseAveragePrice,Difference,ProfitMargin,Volume,BaseVolume,PotentialDailyProfit"); //header
 
             foreach (var regionComparison in eveMarketDataAnalysis.RegionComparisons)
             {
@@ -94,7 +94,7 @@ namespace EveMarketDiscovery.DataAnalysis.History
                     csvBuild.AppendLine($"{ itemComparison.ItemName },{ regionName },Jita," +
                                         $"{ itemComparison.AveragePrice },{ itemComparison.BaseAveragePrice },{ itemComparison.PriceDifference }," +
                                         $"{ itemComparison.ProfitMargin },{itemComparison.Volume},{ itemComparison.BaseVolume}," +
-                                        $"{ itemComparison.AverageVolumeProfitMarginPotential },{ itemComparison.PotentialDailyProfit }");
+                                        $"{ itemComparison.PotentialDailyProfit }");
                 }
             }
 
