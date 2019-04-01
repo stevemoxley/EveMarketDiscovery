@@ -145,7 +145,6 @@ E:\Github\EveMarketDiscovery\EveAccountantWeb\obj\Debug\EveAccountantWeb.csproj.
 E:\Github\EveMarketDiscovery\EveAccountantWeb\bin\ApplicationInsights.config
 E:\Github\EveMarketDiscovery\EveAccountantWeb\bin\auth.txt
 E:\Github\EveMarketDiscovery\EveAccountantWeb\bin\char.txt
-E:\Github\EveMarketDiscovery\EveAccountantWeb\bin\items.txt
 E:\Github\EveMarketDiscovery\EveAccountantWeb\bin\EveAccountantWeb.dll.config
 E:\Github\EveMarketDiscovery\EveAccountantWeb\bin\EveAccountantWeb.dll
 E:\Github\EveMarketDiscovery\EveAccountantWeb\bin\EveAccountantWeb.pdb
@@ -284,8 +283,5 @@ E:\Github\EveMarketDiscovery\EveAccountantWeb\obj\Debug\EveAccountantWeb.csprojA
 E:\Github\EveMarketDiscovery\EveAccountantWeb\obj\Debug\EveAccountantWeb.csproj.CopyComplete
 E:\Github\EveMarketDiscovery\EveAccountantWeb\obj\Debug\EveAccountantWeb.dll
 E:\Github\EveMarketDiscovery\EveAccountantWeb\obj\Debug\EveAccountantWeb.pdb
-E:\Github\EveMarketDiscovery\EveAccountantWeb\bin\x86\e_sqlite3.dll
-E:\Github\EveMarketDiscovery\EveAccountantWeb\bin\x64\e_sqlite3.dll
-E:\Github\EveMarketDiscovery\EveAccountantWeb\bin\EMD.sqlite
-E:\Github\EveMarketDiscovery\EveAccountantWeb\bin\typeIDs.yaml
 E:\Github\EveMarketDiscovery\EveAccountantWeb\bin\YamlDotNet.dll
+E:\Github\EveMarketDiscovery\EveAccountantWeb\bin\typeIDs.yaml

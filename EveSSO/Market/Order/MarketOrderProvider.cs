@@ -2,6 +2,7 @@
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -12,18 +13,25 @@ namespace EveSSO.Market.Order
 {
     public static class MarketOrderProvider
     {
-        public static async Task<List<RegionMarketOrders>> GetMarketOrders(int itemLimit, bool cacheOnly = false)
+        public static List<RegionMarketOrders> GetMarketOrders(int itemLimit, bool cacheOnly = false)
         {
+            System.Net.ServicePointManager.DefaultConnectionLimit = 160;
+            var sw = new Stopwatch();
+            sw.Start();
+
             List<RegionMarketOrders> result = new List<RegionMarketOrders>();
             foreach (var region in Regions)
             {
-                result.Add(await GetRegionMarketOrders(region, itemLimit, cacheOnly));
+                result.Add(GetRegionMarketOrders(region, itemLimit, cacheOnly));
             }
+
+            sw.Stop();
+            Console.WriteLine($"Downloaded { result.Sum(f => f.ItemMarketOrders.Count) } order histories in { (sw.ElapsedMilliseconds / 1000) } s");
 
             return result;
         }
 
-        public static async Task<RegionMarketOrders> GetRegionMarketOrders(long regionId, int itemLimit = -1, bool cacheOnly = false)
+        private static RegionMarketOrders GetRegionMarketOrders(long regionId, int itemLimit = -1, bool cacheOnly = false)
         {
             RegionMarketOrders result = new RegionMarketOrders();
             result.RegionId = regionId;
@@ -35,15 +43,24 @@ namespace EveSSO.Market.Order
                 items = items.Take(itemLimit).ToDictionary(pair => pair.Key, pair => pair.Value);
             }
 
+            List<Task<ItemMarketOrders>> allTasks = new List<Task<ItemMarketOrders>>();
+
             foreach (var item in items)
             {
-                result.ItemMarketOrders.Add(await GetItemMarketOrders(regionId, item.Key, cacheOnly));
+                allTasks.Add(GetItemMarketOrdersAsync(regionId, item.Key, cacheOnly));
+            }
+
+            Task.WaitAll(allTasks.ToArray());
+
+            foreach (var task in allTasks)
+            {
+                result.ItemMarketOrders.Add(task.Result);
             }
 
             return result;
         }
 
-        public static  async Task<ItemMarketOrders> GetItemMarketOrders(long regionId, long itemId, bool cacheOnly = false)
+        public static  async Task<ItemMarketOrders> GetItemMarketOrdersAsync(long regionId, long itemId, bool cacheOnly = false)
         {
             ItemMarketOrders result = new ItemMarketOrders();
             result.RegionId = regionId;

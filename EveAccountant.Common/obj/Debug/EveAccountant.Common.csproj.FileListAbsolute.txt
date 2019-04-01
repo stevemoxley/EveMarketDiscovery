@@ -5,5 +5,5 @@ E:\Github\EveMarketDiscovery\EveAccountant.Common\bin\Debug\EveAccountant.Common
 E:\Github\EveMarketDiscovery\EveAccountant.Common\obj\Debug\EveAccountant.Common.dll
 E:\Github\EveMarketDiscovery\EveAccountant.Common\obj\Debug\EveAccountant.Common.pdb
 E:\Github\EveMarketDiscovery\EveAccountant.Common\bin\Debug\YamlDotNet.dll
-E:\Github\EveMarketDiscovery\EveAccountant.Common\obj\Debug\EveAccountant.Common.csprojAssemblyReference.cache
 E:\Github\EveMarketDiscovery\EveAccountant.Common\obj\Debug\EveAccountant.Common.csproj.CopyComplete
+E:\Github\EveMarketDiscovery\EveAccountant.Common\obj\Debug\EveAccountant.Common.csprojAssemblyReference.cache

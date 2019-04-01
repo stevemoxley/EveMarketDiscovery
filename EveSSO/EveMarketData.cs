@@ -15,17 +15,17 @@ namespace EveSSO
             LoadAllData(itemLimit);
         }
 
-        public async void LoadAllData(int itemLimit)
+        public void LoadAllData(int itemLimit)
         {
-            Console.WriteLine("Loading market history");
-            RegionMarketHistories = GetRegionMarketHistories(itemLimit);
-            //Console.WriteLine("Loading market orders");
-            //RegionMarketOrders = await GetRegionMarketOrders(itemLimit);
+            //Console.WriteLine("Loading market history");
+            //RegionMarketHistories = GetRegionMarketHistories(itemLimit);
+            Console.WriteLine("Loading market orders");
+            RegionMarketOrders = GetRegionMarketOrders(itemLimit);
         }
 
-        public async Task<List<RegionMarketOrders>> GetRegionMarketOrders(int itemLimit)
+        public List<RegionMarketOrders> GetRegionMarketOrders(int itemLimit)
         {
-            return await MarketOrderProvider.GetMarketOrders(itemLimit, false);
+            return MarketOrderProvider.GetMarketOrders(itemLimit, false);
         }
 
         public List<RegionMarketHistory> GetRegionMarketHistories(int itemLimit)

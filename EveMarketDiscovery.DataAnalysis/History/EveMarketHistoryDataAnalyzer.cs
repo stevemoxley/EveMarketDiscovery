@@ -14,14 +14,13 @@ namespace EveMarketDiscovery.DataAnalysis.History
         public EveMarketDataHistoryAnalyzer(EveMarketData eveMarketData)
         {
             _eveMarketData = eveMarketData;
-            _regionProvider = new RegionProvider();
         }
 
         public EveMarketHistoryDataAnalysis GetAnalysis(int itemLimit)
         {
             var data = _eveMarketData.RegionMarketHistories;
             var baseRegionId = 10000002; //Jita
-            var baseRegionData = data.Where(h => h.RegionId == baseRegionId).FirstOrDefault();
+            var baseRegionData = data.FirstOrDefault(h => h.RegionId == baseRegionId);
             data.Remove(baseRegionData);
 
             EveMarketHistoryDataAnalysis result = new EveMarketHistoryDataAnalysis();
@@ -61,8 +60,6 @@ namespace EveMarketDiscovery.DataAnalysis.History
                         itemComparison.ItemName = ItemProvider.Items()[itemComparison.ItemId].Replace(',',' ');
                         itemComparison.Volume = history.volume;
                         itemComparison.BaseVolume = baseHistory.volume;
-
-                        string regionName = _regionProvider.RegionNames[itemComparison.RegionId];
 
                         regionComparison.ItemComparisons.Add(itemComparison);
                     }
@@ -107,9 +104,6 @@ namespace EveMarketDiscovery.DataAnalysis.History
             Console.WriteLine($"Saved CSV as { fileName }");
         }
 
-
-        private EveMarketData _eveMarketData;
-        private RegionProvider _regionProvider;
-
+        private readonly EveMarketData _eveMarketData;
     }
 }
