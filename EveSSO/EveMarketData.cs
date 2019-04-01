@@ -17,8 +17,8 @@ namespace EveSSO
 
         public void LoadAllData(int itemLimit)
         {
-            //Console.WriteLine("Loading market history");
-            //RegionMarketHistories = GetRegionMarketHistories(itemLimit);
+            Console.WriteLine("Loading market history");
+            RegionMarketHistories = GetRegionMarketHistories(itemLimit);
             Console.WriteLine("Loading market orders");
             RegionMarketOrders = GetRegionMarketOrders(itemLimit);
         }

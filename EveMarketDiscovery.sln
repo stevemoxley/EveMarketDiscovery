@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EveAccountant.Services", "E
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EveAccountant.Common", "EveAccountant.Common\EveAccountant.Common.csproj", "{8F168C1E-A0D0-415E-970D-1AC668A747CD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EveMarketOrderBrowser", "EveMarketOrderBrowser\EveMarketOrderBrowser.csproj", "{66387391-3935-4268-8005-A16750A78E59}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{8F168C1E-A0D0-415E-970D-1AC668A747CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8F168C1E-A0D0-415E-970D-1AC668A747CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8F168C1E-A0D0-415E-970D-1AC668A747CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66387391-3935-4268-8005-A16750A78E59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66387391-3935-4268-8005-A16750A78E59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66387391-3935-4268-8005-A16750A78E59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66387391-3935-4268-8005-A16750A78E59}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

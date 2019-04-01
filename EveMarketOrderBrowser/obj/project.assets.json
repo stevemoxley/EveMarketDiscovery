@@ -1,0 +1,331 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETFramework,Version=v4.6.1": {
+      "Newtonsoft.Json/12.0.2-beta1": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        }
+      },
+      "YamlDotNet/6.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net45/YamlDotNet.dll": {}
+        },
+        "runtime": {
+          "lib/net45/YamlDotNet.dll": {}
+        }
+      },
+      "EveAccountant.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.6.1",
+        "dependencies": {
+          "YamlDotNet": "6.0.0"
+        },
+        "compile": {
+          "bin/placeholder/EveAccountant.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EveAccountant.Common.dll": {}
+        }
+      },
+      "EveSSO/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "EveAccountant.Common": "1.0.0",
+          "Newtonsoft.Json": "11.0.2"
+        },
+        "compile": {
+          "bin/placeholder/EveSSO.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EveSSO.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.6.1/win": {
+      "Newtonsoft.Json/12.0.2-beta1": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        }
+      },
+      "YamlDotNet/6.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net45/YamlDotNet.dll": {}
+        },
+        "runtime": {
+          "lib/net45/YamlDotNet.dll": {}
+        }
+      },
+      "EveAccountant.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.6.1",
+        "dependencies": {
+          "YamlDotNet": "6.0.0"
+        },
+        "compile": {
+          "bin/placeholder/EveAccountant.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EveAccountant.Common.dll": {}
+        }
+      },
+      "EveSSO/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "EveAccountant.Common": "1.0.0",
+          "Newtonsoft.Json": "11.0.2"
+        },
+        "compile": {
+          "bin/placeholder/EveSSO.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EveSSO.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.6.1/win-x64": {
+      "Newtonsoft.Json/12.0.2-beta1": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        }
+      },
+      "YamlDotNet/6.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net45/YamlDotNet.dll": {}
+        },
+        "runtime": {
+          "lib/net45/YamlDotNet.dll": {}
+        }
+      },
+      "EveAccountant.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.6.1",
+        "dependencies": {
+          "YamlDotNet": "6.0.0"
+        },
+        "compile": {
+          "bin/placeholder/EveAccountant.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EveAccountant.Common.dll": {}
+        }
+      },
+      "EveSSO/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "EveAccountant.Common": "1.0.0",
+          "Newtonsoft.Json": "11.0.2"
+        },
+        "compile": {
+          "bin/placeholder/EveSSO.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EveSSO.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.6.1/win-x86": {
+      "Newtonsoft.Json/12.0.2-beta1": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        }
+      },
+      "YamlDotNet/6.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net45/YamlDotNet.dll": {}
+        },
+        "runtime": {
+          "lib/net45/YamlDotNet.dll": {}
+        }
+      },
+      "EveAccountant.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.6.1",
+        "dependencies": {
+          "YamlDotNet": "6.0.0"
+        },
+        "compile": {
+          "bin/placeholder/EveAccountant.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EveAccountant.Common.dll": {}
+        }
+      },
+      "EveSSO/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "EveAccountant.Common": "1.0.0",
+          "Newtonsoft.Json": "11.0.2"
+        },
+        "compile": {
+          "bin/placeholder/EveSSO.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EveSSO.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Newtonsoft.Json/12.0.2-beta1": {
+      "sha512": "N60ieuCbsKGsyyspN8urq8tmNT9RitCbPoZBuyD2NKHgQ9O42kGVuQJ+Bmr8RUb7xbpKLTvVAu2vX562Q/G/oQ==",
+      "type": "package",
+      "path": "newtonsoft.json/12.0.2-beta1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.pdb",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.pdb",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.pdb",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.pdb",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.pdb",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.pdb",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.pdb",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.pdb",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.pdb",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "newtonsoft.json.12.0.2-beta1.nupkg.sha512",
+        "newtonsoft.json.nuspec"
+      ]
+    },
+    "YamlDotNet/6.0.0": {
+      "sha512": "Y198v1lh0rda2G8nGZMMClvrS88JQkdqRfZEDY/OrlGjmJujSXoh6eHG23vPC3N7xdQQtl9aFb3ekj/ijWETww==",
+      "type": "package",
+      "path": "yamldotnet/6.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net20/YamlDotNet.dll",
+        "lib/net20/YamlDotNet.xml",
+        "lib/net35-client/YamlDotNet.dll",
+        "lib/net35-client/YamlDotNet.xml",
+        "lib/net35/YamlDotNet.dll",
+        "lib/net35/YamlDotNet.xml",
+        "lib/net45/YamlDotNet.dll",
+        "lib/net45/YamlDotNet.xml",
+        "lib/netstandard1.3/YamlDotNet.dll",
+        "lib/netstandard1.3/YamlDotNet.xml",
+        "yamldotnet.6.0.0.nupkg.sha512",
+        "yamldotnet.nuspec"
+      ]
+    },
+    "EveAccountant.Common/1.0.0": {
+      "type": "project",
+      "path": "../EveAccountant.Common/EveAccountant.Common.csproj",
+      "msbuildProject": "../EveAccountant.Common/EveAccountant.Common.csproj"
+    },
+    "EveSSO/1.0.0": {
+      "type": "project",
+      "path": "../EveSSO/EveSSO.csproj",
+      "msbuildProject": "../EveSSO/EveSSO.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETFramework,Version=v4.6.1": [
+      "EveAccountant.Common >= 1.0.0",
+      "EveSSO >= 1.0.0",
+      "Newtonsoft.Json >= 12.0.2-beta1"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Steve\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "E:\\Github\\EveMarketDiscovery\\EveMarketOrderBrowser\\EveMarketOrderBrowser.csproj",
+      "projectName": "EveMarketOrderBrowser",
+      "projectPath": "E:\\Github\\EveMarketDiscovery\\EveMarketOrderBrowser\\EveMarketOrderBrowser.csproj",
+      "packagesPath": "C:\\Users\\Steve\\.nuget\\packages\\",
+      "outputPath": "E:\\Github\\EveMarketDiscovery\\EveMarketOrderBrowser\\obj\\",
+      "projectStyle": "PackageReference",
+      "skipContentFileWrite": true,
+      "configFilePaths": [
+        "C:\\Users\\Steve\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net461"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net461": {
+          "projectReferences": {
+            "E:\\Github\\EveMarketDiscovery\\EveAccountant.Common\\EveAccountant.Common.csproj": {
+              "projectPath": "E:\\Github\\EveMarketDiscovery\\EveAccountant.Common\\EveAccountant.Common.csproj"
+            },
+            "E:\\Github\\EveMarketDiscovery\\EveSSO\\EveSSO.csproj": {
+              "projectPath": "E:\\Github\\EveMarketDiscovery\\EveSSO\\EveSSO.csproj"
+            }
+          }
+        }
+      }
+    },
+    "frameworks": {
+      "net461": {
+        "dependencies": {
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "[12.0.2-beta1, )"
+          }
+        }
+      }
+    },
+    "runtimes": {
+      "win": {
+        "#import": []
+      },
+      "win-x64": {
+        "#import": []
+      },
+      "win-x86": {
+        "#import": []
+      }
+    }
+  }
+}
