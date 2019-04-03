@@ -322,3 +322,6 @@ E:\Github\EveMarketDiscovery\EveMarketDiscovery.DataAnalysis\obj\Debug\EveMarket
 E:\Github\EveMarketDiscovery\EveMarketDiscovery.DataAnalysis\obj\Debug\EveMarketDiscovery.DataAnalysis.dll
 E:\Github\EveMarketDiscovery\EveMarketDiscovery.DataAnalysis\obj\Debug\EveMarketDiscovery.DataAnalysis.pdb
 E:\Github\EveMarketDiscovery\EveMarketDiscovery.DataAnalysis\bin\Debug\YamlDotNet.dll
+E:\Github\EveMarketDiscovery\EveMarketDiscovery.DataAnalysis\bin\Debug\Newtonsoft.Json.dll
+E:\Github\EveMarketDiscovery\EveMarketDiscovery.DataAnalysis\bin\Debug\Newtonsoft.Json.xml
+E:\Github\EveMarketDiscovery\EveMarketDiscovery.DataAnalysis\bin\Debug\ignoreList.txt

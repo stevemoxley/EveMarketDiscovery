@@ -41,7 +41,7 @@ namespace EveMarketOrderBrowser
 
             var orders = await MarketOrderProvider.GetItemMarketOrdersAsync(region.Key, item.Key);
 
-            var buyOrders = orders.MarketOrders.Where(o => o.is_buy_order).OrderBy(o => o.price).ToList();
+            var buyOrders = orders.MarketOrders.Where(o => o.is_buy_order).OrderByDescending(o => o.price).ToList();
             var sellOrders = orders.MarketOrders.Where(o => !o.is_buy_order).OrderBy(o => o.price).ToList();
 
             BindingList<MarketOrder> buyOrderBindingList = new BindingList<MarketOrder>(buyOrders);
@@ -49,6 +49,9 @@ namespace EveMarketOrderBrowser
 
             dgvBuyOrders.DataSource = buyOrderBindingList;
             dgvSellOrders.DataSource = sellOrderBindingList;
+
+            dgvBuyOrders.Columns[6].DefaultCellStyle.Format = "c";
+            dgvSellOrders.Columns[6].DefaultCellStyle.Format = "c";
 
         }
 

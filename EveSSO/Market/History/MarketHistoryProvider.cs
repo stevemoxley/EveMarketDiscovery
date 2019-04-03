@@ -122,9 +122,23 @@ namespace EveSSO.Market.History
                     return marketDataJson;
                 }
             }
-            catch (Exception ex)
+            catch (WebException webEx)
             {
-                Console.WriteLine($"Exception from web: { ex.Message } on item: { itemId }");
+                HttpWebResponse response = (HttpWebResponse)webEx.Response;
+                if (response.StatusCode == HttpStatusCode.NotFound)
+                {
+                    Console.WriteLine($"Item { itemId } not found. Adding to ignore list.");
+                    ItemProvider.AddToIgnoreList(itemId);
+                }
+                else
+                {
+                    Console.WriteLine($"Exception from web: { webEx.Message } on item: { itemId }");
+                }
+                return string.Empty;
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine($"Exception: { ex.Message }");
                 return string.Empty;
             }
         }

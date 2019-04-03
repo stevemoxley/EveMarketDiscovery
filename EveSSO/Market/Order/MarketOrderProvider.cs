@@ -35,7 +35,7 @@ namespace EveSSO.Market.Order
         {
             RegionMarketOrders result = new RegionMarketOrders();
             result.RegionId = regionId;
-         
+
             var items = ItemProvider.Items();
 
             if (itemLimit > -1)
@@ -60,7 +60,7 @@ namespace EveSSO.Market.Order
             return result;
         }
 
-        public static  async Task<ItemMarketOrders> GetItemMarketOrdersAsync(long regionId, long itemId, bool cacheOnly = false)
+        public static async Task<ItemMarketOrders> GetItemMarketOrdersAsync(long regionId, long itemId, bool cacheOnly = false)
         {
             ItemMarketOrders result = new ItemMarketOrders();
             result.RegionId = regionId;
@@ -74,18 +74,19 @@ namespace EveSSO.Market.Order
                 //Check the age of the file
                 var fileInfo = new FileInfo(fileFormat);
                 var fileAge = DateTime.Now - fileInfo.LastWriteTime;
-                if(fileAge.TotalHours >= 24 && !cacheOnly)
+                if (fileAge.TotalHours >= 24 && !cacheOnly)
                 {
                     ordersJson = await GetMarketOrderJsonFromWebAsync(regionId, itemId);
                 }
                 else
                 {
+                    Console.WriteLine($"Pulled orders from cache for {regionId} - { itemId }");
                     ordersJson = File.ReadAllText(fileFormat);
                 }
             }
             else
             {
-                if(!cacheOnly)
+                if (!cacheOnly)
                     ordersJson = await GetMarketOrderJsonFromWebAsync(regionId, itemId);
             }
 
@@ -115,9 +116,24 @@ namespace EveSSO.Market.Order
                     return marketDataJson;
                 }
             }
+            catch (WebException webEx)
+            {
+                HttpWebResponse response = (HttpWebResponse)webEx.Response;
+                if (response.StatusCode == HttpStatusCode.NotFound)
+                {
+                    Console.WriteLine($"Item { itemId } not found. Adding to ignore list.");
+                    ItemProvider.AddToIgnoreList(itemId);
+                }
+                else
+                {
+                    Console.WriteLine($"Exception from web: { webEx.Message } on item: { itemId }");
+                }
+
+                return string.Empty;
+            }
             catch (Exception ex)
             {
-                Console.WriteLine($"Exception from web: { ex.Message }");
+                Console.WriteLine($"Exception: { ex.Message }");
                 return string.Empty;
             }
 

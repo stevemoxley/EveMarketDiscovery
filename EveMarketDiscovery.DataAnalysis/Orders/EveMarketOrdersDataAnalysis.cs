@@ -13,5 +13,7 @@ namespace EveMarketDiscovery.DataAnalysis.Orders
 
         public long BaseRegionId { get; set; }
 
+        public List<ItemOrderComparison> ItemOrderComparisons { get; set; } = new List<ItemOrderComparison>();
+
     }
 }

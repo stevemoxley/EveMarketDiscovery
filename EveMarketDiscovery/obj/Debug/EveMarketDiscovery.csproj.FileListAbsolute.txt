@@ -372,3 +372,4 @@ E:\Github\EveMarketDiscovery\EveMarketDiscovery\obj\Debug\EveMarketDiscovery.csp
 E:\Github\EveMarketDiscovery\EveMarketDiscovery\obj\Debug\EveMarketDiscovery.exe
 E:\Github\EveMarketDiscovery\EveMarketDiscovery\obj\Debug\EveMarketDiscovery.pdb
 E:\Github\EveMarketDiscovery\EveMarketDiscovery\bin\Debug\YamlDotNet.dll
+E:\Github\EveMarketDiscovery\EveMarketDiscovery\bin\Debug\ignoreList.txt

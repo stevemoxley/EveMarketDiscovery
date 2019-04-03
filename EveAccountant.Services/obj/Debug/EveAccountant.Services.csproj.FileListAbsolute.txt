@@ -240,3 +240,4 @@ E:\Github\EveMarketDiscovery\EveAccountant.Services\obj\Debug\EveAccountant.Serv
 E:\Github\EveMarketDiscovery\EveAccountant.Services\obj\Debug\EveAccountant.Services.dll
 E:\Github\EveMarketDiscovery\EveAccountant.Services\obj\Debug\EveAccountant.Services.pdb
 E:\Github\EveMarketDiscovery\EveAccountant.Services\bin\Debug\YamlDotNet.dll
+E:\Github\EveMarketDiscovery\EveAccountant.Services\bin\Debug\ignoreList.txt

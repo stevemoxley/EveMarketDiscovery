@@ -49,3 +49,4 @@ E:\Github\EveMarketDiscovery\EveSSO\obj\Debug\netstandard2.0\EveSSO.csproj.CopyC
 E:\Github\EveMarketDiscovery\EveSSO\obj\Debug\netstandard2.0\EveSSO.dll
 E:\Github\EveMarketDiscovery\EveSSO\obj\Debug\netstandard2.0\EveSSO.pdb
 E:\Github\EveMarketDiscovery\EveSSO\bin\Debug\netstandard2.0\YamlDotNet.dll
+E:\Github\EveMarketDiscovery\EveSSO\bin\Debug\netstandard2.0\ignoreList.txt

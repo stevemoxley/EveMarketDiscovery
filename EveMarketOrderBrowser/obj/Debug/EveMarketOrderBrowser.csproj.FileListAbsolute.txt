@@ -114,3 +114,4 @@ E:\Github\EveMarketDiscovery\EveMarketOrderBrowser\bin\Debug\EveSSO.pdb
 E:\Github\EveMarketDiscovery\EveMarketOrderBrowser\obj\Debug\EveMarketOrderBrowser.exe.config
 E:\Github\EveMarketDiscovery\EveMarketOrderBrowser\bin\Debug\Newtonsoft.Json.dll
 E:\Github\EveMarketDiscovery\EveMarketOrderBrowser\bin\Debug\Newtonsoft.Json.pdb
+E:\Github\EveMarketDiscovery\EveMarketOrderBrowser\bin\Debug\ignoreList.txt

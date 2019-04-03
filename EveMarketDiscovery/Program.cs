@@ -71,7 +71,16 @@ namespace EveMarketDiscovery
 
             long hek = 10000042;
 
-            orderDataAnalyzer.GetAnalysis(hek, itemLimit);
+            var analysis = orderDataAnalyzer.GetAnalysis(hek, itemLimit);
+
+            Console.WriteLine("Done. Save as csv? y/n");
+
+            if(Console.ReadKey().KeyChar == 'y')
+            {
+                Console.WriteLine("Enter a file name: ");
+                var filename = Console.ReadLine();
+                orderDataAnalyzer.SaveEveMarketOrdersDataAnalysisAsCSV(analysis, $"{filename}.csv");
+            }
         }
     }
 }

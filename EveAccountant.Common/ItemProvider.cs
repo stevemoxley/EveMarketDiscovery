@@ -6,6 +6,8 @@ using System.Text;
 using System.Web;
 using YamlDotNet.Serialization;
 using System.Linq;
+using Newtonsoft.Json;
+using System.Collections.Concurrent;
 
 namespace EveAccountant.Common
 {
@@ -16,6 +18,9 @@ namespace EveAccountant.Common
         {
             if (_items.Count > 0)
                 return _items;
+
+            if (_ignoreList == null)
+                LoadIgnoreList();
 
             string text = null;
 
@@ -28,14 +33,13 @@ namespace EveAccountant.Common
                 text = File.ReadAllText("typeIDs.yaml");
             }
 
-
             var deserializer = new DeserializerBuilder().IgnoreUnmatchedProperties().Build();
 
             var items = deserializer.Deserialize<Dictionary<long, Item>>(text);
 
             foreach (var item in items)
             {
-                if (item.Value.marketGroupID > 0)
+                if (item.Value.marketGroupID > 0 && !_ignoreList.Contains(item.Key))
                 {
                     _items.Add(item.Key, item.Value.ToString());
                 }
@@ -59,7 +63,29 @@ namespace EveAccountant.Common
             return true;
         }
 
+        public static void AddToIgnoreList(long itemId)
+        {
+            if (_ignoreList == null)
+                LoadIgnoreList();
+
+            _ignoreList.Add(itemId);
+            SaveIgnoreList();
+        }
+
+        private static void LoadIgnoreList()
+        {
+            string ignoreList = File.ReadAllText("ignoreList.txt");
+            _ignoreList = JsonConvert.DeserializeObject<ConcurrentBag<long>>(ignoreList) ?? new ConcurrentBag<long>();
+        }
+
+        private static void SaveIgnoreList()
+        {
+            string ignoreListJson = JsonConvert.SerializeObject(_ignoreList);
+            File.WriteAllText("ignoreList.txt", ignoreListJson);
+        }
+
 
         private static Dictionary<long, string> _items = new Dictionary<long, string>();
+        private static ConcurrentBag<long> _ignoreList;
     }
 }

@@ -24,7 +24,7 @@ namespace EveMarketDiscovery.DataAnalysis.History
         {
             get
             {
-                return Math.Abs(AveragePrice - BaseAveragePrice);
+                return AveragePrice - BaseAveragePrice;
             }
         }
 
@@ -32,8 +32,7 @@ namespace EveMarketDiscovery.DataAnalysis.History
         {
             get
             {
-                var max = Math.Max(AveragePrice, BaseAveragePrice);
-                return (PriceDifference / max) * 100;
+                return (PriceDifference / AveragePrice) * 100;
             }
         }
 
