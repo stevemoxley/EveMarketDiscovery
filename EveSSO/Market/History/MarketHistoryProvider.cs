@@ -53,7 +53,10 @@ namespace EveSSO.Market.History
                 else
                 {
                     Console.WriteLine($"Pulled cached history for {regionId} - {itemId}");
-                    marketDataJson = File.ReadAllText(fileFormat);
+                    using (var reader = File.OpenText(fileFormat))
+                    {
+                        marketDataJson = await reader.ReadToEndAsync();
+                    }
                 }
             }
             else

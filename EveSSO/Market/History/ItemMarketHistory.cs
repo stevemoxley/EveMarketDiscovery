@@ -12,5 +12,11 @@ namespace EveSSO.Market.History
         public long RegionId { get; set; }
 
         public MarketHistory[] MarketHistory { get; set; }
+
+
+        public ItemMarketHistory()
+        {
+            MarketHistory = new MarketHistory[0];
+        }
     }
 }

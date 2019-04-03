@@ -56,7 +56,7 @@ namespace EveMarketDiscovery.DataAnalysis.Orders
 
                 long totalMarketInventory = sellOrders.Sum(t => t.volume_total);
                 long totalSoldInventory = sellOrders.Sum(t => (t.volume_total - t.volume_remain));
-                decimal percentSoldInventory =  totalMarketInventory > 0 ? ((decimal)totalSoldInventory / totalMarketInventory) * 100 : 0;
+                decimal percentSoldInventory = totalMarketInventory > 0 ? ((decimal)totalSoldInventory / totalMarketInventory) * 100 : 0;
 
 
                 float lowestSellOrder = sellOrders.Any() ? sellOrders.OrderBy(p => p.price).FirstOrDefault().price : 0;

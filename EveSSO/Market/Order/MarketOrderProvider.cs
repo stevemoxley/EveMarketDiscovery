@@ -81,7 +81,10 @@ namespace EveSSO.Market.Order
                 else
                 {
                     Console.WriteLine($"Pulled orders from cache for {regionId} - { itemId }");
-                    ordersJson = File.ReadAllText(fileFormat);
+                    using (var reader = File.OpenText(fileFormat))
+                    {
+                        ordersJson = await reader.ReadToEndAsync();
+                    }
                 }
             }
             else
