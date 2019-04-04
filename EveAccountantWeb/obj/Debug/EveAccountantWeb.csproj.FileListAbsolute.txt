@@ -285,3 +285,7 @@ E:\Github\EveMarketDiscovery\EveAccountantWeb\obj\Debug\EveAccountantWeb.dll
 E:\Github\EveMarketDiscovery\EveAccountantWeb\obj\Debug\EveAccountantWeb.pdb
 E:\Github\EveMarketDiscovery\EveAccountantWeb\bin\YamlDotNet.dll
 E:\Github\EveMarketDiscovery\EveAccountantWeb\bin\typeIDs.yaml
+E:\Github\EveMarketDiscovery\EveAccountantWeb\bin\x86\e_sqlite3.dll
+E:\Github\EveMarketDiscovery\EveAccountantWeb\bin\x64\e_sqlite3.dll
+E:\Github\EveMarketDiscovery\EveAccountantWeb\bin\ignoreList.txt
+E:\Github\EveMarketDiscovery\EveAccountantWeb\bin\EMD.sqlite

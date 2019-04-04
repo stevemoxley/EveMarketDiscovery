@@ -11,5 +11,10 @@ namespace EveSSO.Market.Order
         public long RegionId { get; set; }
 
         public MarketOrder[] MarketOrders { get; set; }
+
+        public ItemMarketOrders()
+        {
+            MarketOrders = new MarketOrder[0];
+        }
     }
 }

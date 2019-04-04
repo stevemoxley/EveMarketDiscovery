@@ -16,7 +16,7 @@ namespace EveSSO.Market.History
 
         public static List<RegionMarketHistory> GetMarketHistoryFromWeb(int itemLimit)
         {
-            System.Net.ServicePointManager.DefaultConnectionLimit = 160;
+            System.Net.ServicePointManager.DefaultConnectionLimit = 250;
             var sw = new Stopwatch();
             sw.Start();
 
@@ -52,7 +52,7 @@ namespace EveSSO.Market.History
                 }
                 else
                 {
-                    Console.WriteLine($"Pulled cached history for {regionId} - {itemId}");
+                    //Console.WriteLine($"Pulled cached history for {regionId} - {itemId}");
                     using (var reader = File.OpenText(fileFormat))
                     {
                         marketDataJson = await reader.ReadToEndAsync();
@@ -118,7 +118,7 @@ namespace EveSSO.Market.History
                     var uri = new Uri($"https://esi.evetech.net/latest/markets/{ regionId }/history/?datasource=tranquility&type_id={ itemId }");
                     string marketDataJson = await webClient.DownloadStringTaskAsync(uri);
 
-                    Console.WriteLine($"Downloaded web history for {regionId} - {itemId}");
+                   // Console.WriteLine($"Downloaded web history for {regionId} - {itemId}");
 
                     File.WriteAllText(fileFormat, marketDataJson);
 

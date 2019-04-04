@@ -15,7 +15,7 @@ namespace EveSSO.Market.Order
     {
         public static List<RegionMarketOrders> GetMarketOrders(int itemLimit, bool cacheOnly = false)
         {
-            System.Net.ServicePointManager.DefaultConnectionLimit = 160;
+            System.Net.ServicePointManager.DefaultConnectionLimit = 250;
             var sw = new Stopwatch();
             sw.Start();
 
@@ -80,7 +80,7 @@ namespace EveSSO.Market.Order
                 }
                 else
                 {
-                    Console.WriteLine($"Pulled orders from cache for {regionId} - { itemId }");
+                    //Console.WriteLine($"Pulled orders from cache for {regionId} - { itemId }");
                     using (var reader = File.OpenText(fileFormat))
                     {
                         ordersJson = await reader.ReadToEndAsync();
@@ -108,7 +108,7 @@ namespace EveSSO.Market.Order
                     Directory.CreateDirectory(_ordersCacheDirectory);
                 }
 
-                Console.WriteLine($"Downloading web orders for {regionId} - {itemId}");
+               // Console.WriteLine($"Downloading web orders for {regionId} - {itemId}");
                 string fileFormat = $"{_ordersCacheDirectory}/{regionId}_{itemId}.txt";
                 using (var webClient = new WebClient())
                 {
