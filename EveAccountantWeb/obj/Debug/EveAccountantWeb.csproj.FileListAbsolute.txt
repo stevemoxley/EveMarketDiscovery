@@ -140,7 +140,6 @@ D:\Github\EveMarketDiscovery\EveAccountantWeb\bin\EveAccountant.Services.dll.con
 D:\Github\EveMarketDiscovery\EveAccountantWeb\bin\Newtonsoft.Json.pdb
 D:\Github\EveMarketDiscovery\EveAccountantWeb\bin\char.txt
 D:\Github\EveMarketDiscovery\EveAccountantWeb\bin\auth.txt
-D:\Github\EveMarketDiscovery\EveAccountantWeb\bin\items.txt
 E:\Github\EveMarketDiscovery\EveAccountantWeb\obj\Debug\EveAccountantWeb.csproj.CoreCompileInputs.cache
 E:\Github\EveMarketDiscovery\EveAccountantWeb\bin\ApplicationInsights.config
 E:\Github\EveMarketDiscovery\EveAccountantWeb\bin\auth.txt
@@ -289,3 +288,9 @@ E:\Github\EveMarketDiscovery\EveAccountantWeb\bin\x86\e_sqlite3.dll
 E:\Github\EveMarketDiscovery\EveAccountantWeb\bin\x64\e_sqlite3.dll
 E:\Github\EveMarketDiscovery\EveAccountantWeb\bin\ignoreList.txt
 E:\Github\EveMarketDiscovery\EveAccountantWeb\bin\EMD.sqlite
+D:\Github\EveMarketDiscovery\EveAccountantWeb\bin\x86\e_sqlite3.dll
+D:\Github\EveMarketDiscovery\EveAccountantWeb\bin\x64\e_sqlite3.dll
+D:\Github\EveMarketDiscovery\EveAccountantWeb\bin\ignoreList.txt
+D:\Github\EveMarketDiscovery\EveAccountantWeb\bin\EMD.sqlite
+D:\Github\EveMarketDiscovery\EveAccountantWeb\bin\typeIDs.yaml
+D:\Github\EveMarketDiscovery\EveAccountantWeb\bin\YamlDotNet.dll

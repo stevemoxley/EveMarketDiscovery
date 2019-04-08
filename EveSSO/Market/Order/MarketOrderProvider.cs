@@ -95,6 +95,9 @@ namespace EveSSO.Market.Order
 
             result.MarketOrders = JsonConvert.DeserializeObject<MarketOrder[]>(ordersJson);
 
+            if (result.MarketOrders == null)
+                result.MarketOrders = new MarketOrder[0];
+
 
             return result;
         }

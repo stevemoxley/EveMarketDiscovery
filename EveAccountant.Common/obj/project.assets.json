@@ -80,11 +80,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Github\\EveMarketDiscovery\\EveAccountant.Common\\EveAccountant.Common.csproj",
+      "projectUniqueName": "D:\\Github\\EveMarketDiscovery\\EveAccountant.Common\\EveAccountant.Common.csproj",
       "projectName": "EveAccountant.Common",
-      "projectPath": "E:\\Github\\EveMarketDiscovery\\EveAccountant.Common\\EveAccountant.Common.csproj",
+      "projectPath": "D:\\Github\\EveMarketDiscovery\\EveAccountant.Common\\EveAccountant.Common.csproj",
       "packagesPath": "C:\\Users\\Steve\\.nuget\\packages\\",
-      "outputPath": "E:\\Github\\EveMarketDiscovery\\EveAccountant.Common\\obj\\",
+      "outputPath": "D:\\Github\\EveMarketDiscovery\\EveAccountant.Common\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [

@@ -325,3 +325,8 @@ E:\Github\EveMarketDiscovery\EveMarketDiscovery.DataAnalysis\bin\Debug\YamlDotNe
 E:\Github\EveMarketDiscovery\EveMarketDiscovery.DataAnalysis\bin\Debug\Newtonsoft.Json.dll
 E:\Github\EveMarketDiscovery\EveMarketDiscovery.DataAnalysis\bin\Debug\Newtonsoft.Json.xml
 E:\Github\EveMarketDiscovery\EveMarketDiscovery.DataAnalysis\bin\Debug\ignoreList.txt
+D:\Github\EveMarketDiscovery\EveMarketDiscovery.DataAnalysis\bin\Debug\ignoreList.txt
+D:\Github\EveMarketDiscovery\EveMarketDiscovery.DataAnalysis\bin\Debug\typeIDs.yaml
+D:\Github\EveMarketDiscovery\EveMarketDiscovery.DataAnalysis\bin\Debug\YamlDotNet.dll
+D:\Github\EveMarketDiscovery\EveMarketDiscovery.DataAnalysis\bin\Debug\Newtonsoft.Json.dll
+D:\Github\EveMarketDiscovery\EveMarketDiscovery.DataAnalysis\bin\Debug\Newtonsoft.Json.xml

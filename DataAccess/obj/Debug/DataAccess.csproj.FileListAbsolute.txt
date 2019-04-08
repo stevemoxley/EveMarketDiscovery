@@ -347,3 +347,4 @@ E:\Github\EveMarketDiscovery\DataAccess\obj\Debug\DataAccess.csproj.CopyComplete
 E:\Github\EveMarketDiscovery\DataAccess\obj\Debug\DataAccess.dll
 E:\Github\EveMarketDiscovery\DataAccess\obj\Debug\DataAccess.pdb
 E:\Github\EveMarketDiscovery\DataAccess\bin\Debug\YamlDotNet.dll
+D:\Github\EveMarketDiscovery\DataAccess\bin\Debug\YamlDotNet.dll

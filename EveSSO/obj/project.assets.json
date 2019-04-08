@@ -241,11 +241,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Github\\EveMarketDiscovery\\EveSSO\\EveSSO.csproj",
+      "projectUniqueName": "D:\\Github\\EveMarketDiscovery\\EveSSO\\EveSSO.csproj",
       "projectName": "EveSSO",
-      "projectPath": "E:\\Github\\EveMarketDiscovery\\EveSSO\\EveSSO.csproj",
+      "projectPath": "D:\\Github\\EveMarketDiscovery\\EveSSO\\EveSSO.csproj",
       "packagesPath": "C:\\Users\\Steve\\.nuget\\packages\\",
-      "outputPath": "E:\\Github\\EveMarketDiscovery\\EveSSO\\obj\\",
+      "outputPath": "D:\\Github\\EveMarketDiscovery\\EveSSO\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -264,8 +264,8 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "E:\\Github\\EveMarketDiscovery\\EveAccountant.Common\\EveAccountant.Common.csproj": {
-              "projectPath": "E:\\Github\\EveMarketDiscovery\\EveAccountant.Common\\EveAccountant.Common.csproj"
+            "D:\\Github\\EveMarketDiscovery\\EveAccountant.Common\\EveAccountant.Common.csproj": {
+              "projectPath": "D:\\Github\\EveMarketDiscovery\\EveAccountant.Common\\EveAccountant.Common.csproj"
             }
           }
         }

@@ -275,11 +275,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Github\\EveMarketDiscovery\\EveMarketOrderBrowser\\EveMarketOrderBrowser.csproj",
+      "projectUniqueName": "D:\\Github\\EveMarketDiscovery\\EveMarketOrderBrowser\\EveMarketOrderBrowser.csproj",
       "projectName": "EveMarketOrderBrowser",
-      "projectPath": "E:\\Github\\EveMarketDiscovery\\EveMarketOrderBrowser\\EveMarketOrderBrowser.csproj",
+      "projectPath": "D:\\Github\\EveMarketDiscovery\\EveMarketOrderBrowser\\EveMarketOrderBrowser.csproj",
       "packagesPath": "C:\\Users\\Steve\\.nuget\\packages\\",
-      "outputPath": "E:\\Github\\EveMarketDiscovery\\EveMarketOrderBrowser\\obj\\",
+      "outputPath": "D:\\Github\\EveMarketDiscovery\\EveMarketOrderBrowser\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
@@ -296,11 +296,11 @@
       "frameworks": {
         "net461": {
           "projectReferences": {
-            "E:\\Github\\EveMarketDiscovery\\EveAccountant.Common\\EveAccountant.Common.csproj": {
-              "projectPath": "E:\\Github\\EveMarketDiscovery\\EveAccountant.Common\\EveAccountant.Common.csproj"
+            "D:\\Github\\EveMarketDiscovery\\EveAccountant.Common\\EveAccountant.Common.csproj": {
+              "projectPath": "D:\\Github\\EveMarketDiscovery\\EveAccountant.Common\\EveAccountant.Common.csproj"
             },
-            "E:\\Github\\EveMarketDiscovery\\EveSSO\\EveSSO.csproj": {
-              "projectPath": "E:\\Github\\EveMarketDiscovery\\EveSSO\\EveSSO.csproj"
+            "D:\\Github\\EveMarketDiscovery\\EveSSO\\EveSSO.csproj": {
+              "projectPath": "D:\\Github\\EveMarketDiscovery\\EveSSO\\EveSSO.csproj"
             }
           }
         }

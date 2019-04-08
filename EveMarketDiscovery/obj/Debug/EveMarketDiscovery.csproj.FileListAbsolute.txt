@@ -373,3 +373,6 @@ E:\Github\EveMarketDiscovery\EveMarketDiscovery\obj\Debug\EveMarketDiscovery.exe
 E:\Github\EveMarketDiscovery\EveMarketDiscovery\obj\Debug\EveMarketDiscovery.pdb
 E:\Github\EveMarketDiscovery\EveMarketDiscovery\bin\Debug\YamlDotNet.dll
 E:\Github\EveMarketDiscovery\EveMarketDiscovery\bin\Debug\ignoreList.txt
+D:\Github\EveMarketDiscovery\EveMarketDiscovery\bin\Debug\ignoreList.txt
+D:\Github\EveMarketDiscovery\EveMarketDiscovery\bin\Debug\typeIDs.yaml
+D:\Github\EveMarketDiscovery\EveMarketDiscovery\bin\Debug\YamlDotNet.dll
